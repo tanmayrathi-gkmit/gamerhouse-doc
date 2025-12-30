@@ -271,7 +271,7 @@
 <li><code>platforms.name</code> – UNIQUE</li>
 <li><code>games (user_id, title)</code> – UNIQUE (prevents duplicate entries per user)</li>
 <li>Foreign key constraints enforced across all relations</li>
-<li>Enum validation handled at application level</li>
+<li>Enum validation enforced via model field choices and serializer validation</li>
 </ul>
 <h2 id="api-design">API Design</h2>
 <h4 id="base-configuration">Base Configuration</h4>
@@ -295,12 +295,12 @@
 <p><strong>Games - Supported filters:</strong></p>
 <ul>
 <li><code>title</code> (partial match)</li>
-<li><code>genre</code></li>
-<li><code>platform</code></li>
+<li><code>genre_id</code></li>
+<li><code>platform_id</code></li>
 <li><code>status</code></li>
 </ul>
 <p>Example:</p>
-<pre><code>GET /games?status=PLAYING&amp;platform=pc
+<pre><code>GET /games?status=PLAYING&amp;platform_id=550e8400-e29b-41d4-a716-446655440000
 </code></pre>
 <h4 id="authentication">Authentication</h4>
 <pre><code>POST /auth/register
@@ -434,5 +434,5 @@ DELETE /admin/users/{id}
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-12-30 15:31:21.712184+00:00
+Build Date UTC : 2025-12-30 15:34:53.550196+00:00
 -->
