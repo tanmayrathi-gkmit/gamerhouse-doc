@@ -162,7 +162,6 @@
 <h3 id="users-module">Users Module</h3>
 <ul>
 <li>Custom user model based on <code>AbstractUser</code></li>
-<li>One-to-many role assignment (one role per user)</li>
 <li>Authentication and authorization logic</li>
 </ul>
 <h3 id="game-catalog-module">Game Catalog Module</h3>
@@ -186,18 +185,14 @@
 </ul>
 <h2 id="database-design">Database Design</h2>
 <p>The database follows a <strong>normalized relational design</strong> separating global catalog data from user-specific data.</p>
-<p><a href="https://mermaid.live/edit#pako:eNrFVmtr2zAU_StCnxqws8Sdm9SwQdeEraMP04aNDYPRYsURsyVPlrtmSf77ruQ8nIfbFFoKIdbVPTq690i60hQPRUSxh23bDvhQ8BGLvYAjpMY0pR6K6IgUidI9CZmIQkEXiSUNuBlAZY-BSdKABypikg4VExwNPmm7yKnM0VQ3wShYhOCHApz9DjB8191SJDQsfaOK757I4ZjIo3ar1UCajJOUalDB2Z-C7gId120gmhKWPInKSJ7_FdLMOSb5mEY1wBGTuQqXM9eAErIXExFFFYPeoaTQjEKiagBFFj0OiGhCdwFz-IOP1u8poTfi3RTyKAZTviNRynjj5aJfBKfJnxWcYirZElLRBwUS5EPJMrPBduJAEgQiOQ2N8aKrUM0jjCmXW-lox57dW_o0fMe5ZNzleta6vVKKWULUSMj08CyXI-oS3c_49rmGkgJ1rg4rUiUW-H5NyiyR_dGUpbzJ6qqHmeXZG3pFAXUvVwQKqfZTXqRHfv-6d3H92UJnvn97863fs9Bt_2v_fNDvNbbozXkOuXil86AzDw853KbboOsOySFbCxoTCKX-ltgj1veLuy-XF3cDC_mXZz-MbOc3V_5lf6B1693e-P6GbIwrNBaFzBezbcqivRmstuAkCSUBO9aAtu1uCa8lz-s0F2lWreSw9IugP6xje6MbZDazbTE1O9oDP4CWNUF7ZtNqBfQMAV6XsXJwHWSbZFURKqBVX5VqH3C98wzlbBVxjd80H_HXzVEJZFUpSmGwhWPJIuwpWVALw-0Jjw4w8TQwR9k8ngLsQXP5gALWOQzLCP8pRLocKUURj7E3IkkOVrmGixfVCkJ5ROW5KLjC3qlhwN4UP2CvfXzc7J50nM6pe9I57XbfuxaeYM91mifdltN1O47Tdlqd47mF_5k5W81uBzA0YkrIq_LdZ55_8_8ATW3B"><img alt="" src="https://mermaid.ink/img/pako:eNrFVmtr2zAU_StCnxqws8Sdm9SwQdeEraMP04aNDYPRYsURsyVPlrtmSf77ruQ8nIfbFFoKIdbVPTq690i60hQPRUSxh23bDvhQ8BGLvYAjpMY0pR6K6IgUidI9CZmIQkEXiSUNuBlAZY-BSdKABypikg4VExwNPmm7yKnM0VQ3wShYhOCHApz9DjB8191SJDQsfaOK757I4ZjIo3ar1UCajJOUalDB2Z-C7gId120gmhKWPInKSJ7_FdLMOSb5mEY1wBGTuQqXM9eAErIXExFFFYPeoaTQjEKiagBFFj0OiGhCdwFz-IOP1u8poTfi3RTyKAZTviNRynjj5aJfBKfJnxWcYirZElLRBwUS5EPJMrPBduJAEgQiOQ2N8aKrUM0jjCmXW-lox57dW_o0fMe5ZNzleta6vVKKWULUSMj08CyXI-oS3c_49rmGkgJ1rg4rUiUW-H5NyiyR_dGUpbzJ6qqHmeXZG3pFAXUvVwQKqfZTXqRHfv-6d3H92UJnvn97863fs9Bt_2v_fNDvNbbozXkOuXil86AzDw853KbboOsOySFbCxoTCKX-ltgj1veLuy-XF3cDC_mXZz-MbOc3V_5lf6B1693e-P6GbIwrNBaFzBezbcqivRmstuAkCSUBO9aAtu1uCa8lz-s0F2lWreSw9IugP6xje6MbZDazbTE1O9oDP4CWNUF7ZtNqBfQMAV6XsXJwHWSbZFURKqBVX5VqH3C98wzlbBVxjd80H_HXzVEJZFUpSmGwhWPJIuwpWVALw-0Jjw4w8TQwR9k8ngLsQXP5gALWOQzLCP8pRLocKUURj7E3IkkOVrmGixfVCkJ5ROW5KLjC3qlhwN4UP2CvfXzc7J50nM6pe9I57XbfuxaeYM91mifdltN1O47Tdlqd47mF_5k5W81uBzA0YkrIq_LdZ55_8_8ATW3B?type=png" /></a></p>
+<p><a href="https://mermaid.live/edit#pako:eNrFVm1v2jAQ_iuWPw0pYUDJKJE2qSto69SXqEWbNkWKPGKCtcTObGcrA_77zg6hKTS0kzo1QsTne_zci30XL_FUxBT72HXdkE8Fn7HEDzlCek4z6qOYzkiRajOTkoUoNEyRRNKQ2wVUjhiIJAt5qGMm6VQzwdHkvZELRaVCSzMEoWAxgh8Kcf4jxPAGyvL5ReR0TuSrXqeFpEgpQCgvslcJyah8TeKM8Va5whBV6G4H4MYEB5ihLTj7WdB9YM_zWohmhKWPonKi1G8hrZdzouY0bgDOmFQ6qiw3gFLyICYmmmoGs1NJYRhHRDcAijw-DIhpSvcBa_iDl0nfofTv-auZTnd81fRWgxU1lSy3O7vnB5LgA1E0ssKzBlqPI0oolzvhGEVUxjSrxVTqDHxPWTHucz2SmqYz9qwh5inRMyGzp0dZrWgK9GHGl481khSolX7MLzu9wQLf90UZJXLf2cpXbdZUoNbKPx_oeidSmkAHQ1UzCsaXo7PLDw46CYLrq8_jkYOux5_Gp5PxqLVDbztWxMV_qgcTefSU4rbTFt1UJE85WjBYgCv7sAPJ-nJ28_H87GbioOD85KtN2-nVRXA-npi8ja6vguBe2hjXaC4KqTbW7qfFaHPYbcFJGkkCcmIAXdfbSbxJuWrKucjyerOErd84_fbOtxdq0quV666W9T7nWxi-a1YGIhohuyTbuq-BtnN1qoeAd-fLUq5spR3Q2-EBfZONmiPbfmAgIcYOTiSLsa9lQR0MtwD4eoOIl6EtWHs3CbEPw-p-AqxrWJYT_k2IrFopRZHMsT8jqQKp3KnNhWULoTym8lQUXGP_aGApsL_Et9jvep328PhNf9jtDY8HnUG_5-AF9j2v3YGn1-97R15v4A37awf_sVY77eOB52AaMy3kRXmxsver9V8VUDPr"><img alt="" src="https://mermaid.ink/img/pako:eNrFVm1v2jAQ_iuWPw0pYUDJKJE2qSto69SXqEWbNkWKPGKCtcTObGcrA_77zg6hKTS0kzo1QsTne_zci30XL_FUxBT72HXdkE8Fn7HEDzlCek4z6qOYzkiRajOTkoUoNEyRRNKQ2wVUjhiIJAt5qGMm6VQzwdHkvZELRaVCSzMEoWAxgh8Kcf4jxPAGyvL5ReR0TuSrXqeFpEgpQCgvslcJyah8TeKM8Va5whBV6G4H4MYEB5ihLTj7WdB9YM_zWohmhKWPonKi1G8hrZdzouY0bgDOmFQ6qiw3gFLyICYmmmoGs1NJYRhHRDcAijw-DIhpSvcBa_iDl0nfofTv-auZTnd81fRWgxU1lSy3O7vnB5LgA1E0ssKzBlqPI0oolzvhGEVUxjSrxVTqDHxPWTHucz2SmqYz9qwh5inRMyGzp0dZrWgK9GHGl481khSolX7MLzu9wQLf90UZJXLf2cpXbdZUoNbKPx_oeidSmkAHQ1UzCsaXo7PLDw46CYLrq8_jkYOux5_Gp5PxqLVDbztWxMV_qgcTefSU4rbTFt1UJE85WjBYgCv7sAPJ-nJ28_H87GbioOD85KtN2-nVRXA-npi8ja6vguBe2hjXaC4KqTbW7qfFaHPYbcFJGkkCcmIAXdfbSbxJuWrKucjyerOErd84_fbOtxdq0quV666W9T7nWxi-a1YGIhohuyTbuq-BtnN1qoeAd-fLUq5spR3Q2-EBfZONmiPbfmAgIcYOTiSLsa9lQR0MtwD4eoOIl6EtWHs3CbEPw-p-AqxrWJYT_k2IrFopRZHMsT8jqQKp3KnNhWULoTym8lQUXGP_aGApsL_Et9jvep328PhNf9jtDY8HnUG_5-AF9j2v3YGn1-97R15v4A37awf_sVY77eOB52AaMy3kRXmxsver9V8VUDPr?type=png" /></a></p>
 <h2 id="entities">Entities</h2>
 <h3 id="users">Users</h3>
 <ul>
 <li>Stores application users (admins and gamers)</li>
 <li>Each user belongs to exactly one role</li>
 <li>Supports soft deletion for auditability</li>
-</ul>
-<h3 id="roles">Roles</h3>
-<ul>
-<li>Defines user roles (<code>admin</code>, <code>gamer</code>)</li>
-<li>One role can be assigned to many users</li>
+<li>Role is enum - admin or gamer</li>
 </ul>
 <h3 id="games">Games</h3>
 <ul>
@@ -237,7 +232,6 @@
 <ul>
 <li><code>users.email</code> - UNIQUE</li>
 <li><code>users.username</code> - UNIQUE</li>
-<li><code>roles.name</code> - UNIQUE</li>
 <li><code>genres.name</code> - UNIQUE</li>
 <li><code>platforms.name</code> - UNIQUE</li>
 <li><code>user_games (user_id, game_id)</code> - UNIQUE (prevents duplicate entries)</li>
@@ -319,8 +313,7 @@
 <blockquote>
 <p>Registration assigns the <strong>gamer role by default</strong>. Role cannot be chosen by the client.</p>
 </blockquote>
-<h3 id="admin-apis">Admin APIs</h3>
-<h4 id="user-management">User Management</h4>
+<h3 id="admin-user-management-apis">Admin User Management APIs</h3>
 <table>
 <thead>
 <tr>
@@ -352,41 +345,6 @@
 </tr>
 </tbody>
 </table>
-<h4 id="role-management">Role Management</h4>
-<table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/admin/roles</code></td>
-<td>GET</td>
-<td>List roles</td>
-</tr>
-<tr>
-<td><code>/admin/roles</code></td>
-<td>POST</td>
-<td>Create role</td>
-</tr>
-<tr>
-<td><code>/admin/roles/{id}</code></td>
-<td>GET</td>
-<td>Get role</td>
-</tr>
-<tr>
-<td><code>/admin/roles/{id}</code></td>
-<td>PATCH</td>
-<td>Update role</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Role deletion is intentionally not supported.</p>
-</blockquote>
 <h3 id="authenticated-user-apis">Authenticated User APIs</h3>
 <table>
 <thead>
@@ -712,5 +670,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-12-30 11:00:51.372708+00:00
+Build Date UTC : 2025-12-30 11:31:50.221546+00:00
 -->
