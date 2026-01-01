@@ -308,6 +308,12 @@ POST /auth/login
 POST /auth/refresh
 POST /auth/logout
 </code></pre>
+<h4 id="admin-user-management-apis">Admin User Management APIs</h4>
+<pre><code>GET    /users
+GET    /users/{id}
+PATCH  /users/{id}
+DELETE /users/{id}
+</code></pre>
 <h4 id="authenticated-user-apis">Authenticated User APIs</h4>
 <pre><code>GET    /users/me
 PATCH  /users/me
@@ -336,12 +342,6 @@ PATCH  /genres/{id}     (admin only)
 POST  /platforms (admin only)
 GET   /platforms/{id} 
 PATCH /platforms/{id} (admin only)
-</code></pre>
-<h4 id="admin-user-management-apis">Admin User Management APIs</h4>
-<pre><code>GET    /admin/users
-GET    /admin/users/{id}
-PATCH  /admin/users/{id}
-DELETE /admin/users/{id}
 </code></pre>
 <h2 id="authentication-authorization-strategy">Authentication &amp; Authorization Strategy</h2>
 <ul>
@@ -434,5 +434,5 @@ DELETE /admin/users/{id}
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-12-30 15:34:53.550196+00:00
+Build Date UTC : 2026-01-01 15:11:28.379276+00:00
 -->
