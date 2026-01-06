@@ -168,12 +168,80 @@
 <li>Soft delete or deactivate users</li>
 <li>Manage system-defined genres and platforms</li>
 <li>Does <strong>not</strong> manage or modify user game entries</li>
+<li>Admin users cannot be deleted via any API endpoint.</li>
 </ul>
+<h3 id="permission-matrix">Permission Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Action / Resource</th>
+<th style="text-align: center;">Gamer</th>
+<th style="text-align: center;">Admin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Register / Login</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>View own profile</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Update own profile</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Delete own account</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✖ <em>(blocked)</em></td>
+</tr>
+<tr>
+<td>View other users</td>
+<td style="text-align: center;">✖</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Update other users</td>
+<td style="text-align: center;">✖</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Delete other users</td>
+<td style="text-align: center;">✖</td>
+<td style="text-align: center;">✔ <em>(except admins)</em></td>
+</tr>
+<tr>
+<td>View all games</td>
+<td style="text-align: center;">✖</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Create / Edit Games</td>
+<td style="text-align: center;">✔ <em>(own only)</em></td>
+<td style="text-align: center;">✖</td>
+</tr>
+<tr>
+<td>View Genres / Platforms</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Manage Genres / Platforms</td>
+<td style="text-align: center;">✖</td>
+<td style="text-align: center;">✔</td>
+</tr>
+</tbody>
+</table>
 <h2 id="technology-stack">Technology Stack</h2>
 <ul>
 <li><strong>Backend Framework:</strong> Django, Django REST Framework</li>
 <li><strong>Authentication:</strong> JWT (Access &amp; Refresh tokens)</li>
-<li><strong>Database:</strong> PostgreSQL (SQLite for development)</li>
+<li><strong>Database:</strong> PostgreSQL </li>
 <li><strong>ORM:</strong> Django ORM</li>
 </ul>
 <h2 id="module-breakdown">Module Breakdown</h2>
@@ -269,7 +337,8 @@
 <li><code>users.username</code> – UNIQUE</li>
 <li><code>genres.name</code> – UNIQUE</li>
 <li><code>platforms.name</code> – UNIQUE</li>
-<li><code>games (user_id, title)</code> – UNIQUE (prevents duplicate entries per user)</li>
+<li><code>games(user_id, status)</code> - Optimizes user-scoped game queries with status filtering</li>
+<li><code>games.created_at</code> - Supports default ordering and paginated listing</li>
 <li>Foreign key constraints enforced across all relations</li>
 <li>Enum validation enforced via model field choices and serializer validation</li>
 </ul>
@@ -293,15 +362,90 @@
 <h4 id="filtering-query-parameters">Filtering &amp; Query Parameters</h4>
 <p>Filtering is supported on list endpoints where applicable. Multiple filter values are supported using comma-separated parameters.</p>
 <p><strong>Games - Supported filters:</strong></p>
-<ul>
-<li><code>title</code> (partial match)</li>
-<li><code>genre_id</code></li>
-<li><code>platform_id</code></li>
-<li><code>status</code></li>
-</ul>
-<p>Example:</p>
-<pre><code>GET /games?status=PLAYING&amp;platform_id=550e8400-e29b-41d4-a716-446655440000
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>search</code></td>
+<td>Case-insensitive match on game title</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Comma-separated list of game statuses</td>
+</tr>
+<tr>
+<td><code>genre</code></td>
+<td>Comma-separated genre UUIDs</td>
+</tr>
+<tr>
+<td><code>platform</code></td>
+<td>Comma-separated platform UUIDs</td>
+</tr>
+<tr>
+<td><code>min_rating</code></td>
+<td>Minimum personal rating (integer)</td>
+</tr>
+<tr>
+<td><code>min_hours</code></td>
+<td>Minimum hours played (integer)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Behavior notes:</strong>
+- All filters are optional; missing parameters are ignored.
+- Comma-separated values are split, trimmed, and applied using <code>__in</code>.
+- Invalid values return an empty list (no errors raised)</p>
+<p>Examples:</p>
+<pre><code>GET /games?status=playing&amp;platform_id=550e8400-e29b-41d4-a716-446655440000
+
 </code></pre>
+<pre><code>GET /api/v1/games/?status=completed,playing
+GET /api/v1/games/?genre={uuid},{uuid}
+GET /api/v1/games/?platform={uuid}
+GET /api/v1/games/?min_rating=4
+GET /api/v1/games/?min_hours=10
+GET /api/v1/games/?status=completed&amp;min_rating=4
+</code></pre>
+<h4 id="summary-quick-reference">Summary (quick reference)</h4>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td><code>?status=completed,playing</code></td>
+</tr>
+<tr>
+<td>genre</td>
+<td><code>?genre=1,2</code></td>
+</tr>
+<tr>
+<td>platform</td>
+<td><code>?platform=3,4</code></td>
+</tr>
+<tr>
+<td>min_rating</td>
+<td><code>?min_rating=4</code></td>
+</tr>
+<tr>
+<td>min_hours</td>
+<td><code>?min_hours=20</code></td>
+</tr>
+<tr>
+<td>all combined</td>
+<td><code>?status=completed&amp;genre=1&amp;platform=2&amp;min_rating=4&amp;min_hours=30</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="authentication">Authentication</h4>
 <pre><code>POST /auth/register
 POST /auth/login
@@ -434,5 +578,5 @@ PATCH /platforms/{id} (admin only)
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2026-01-01 21:20:55.417342+00:00
+Build Date UTC : 2026-01-06 13:08:39.391708+00:00
 -->
