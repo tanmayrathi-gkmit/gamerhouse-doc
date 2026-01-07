@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../architecture/">
       
-        <link rel="next" href="architecture/">
+      
+        <link rel="next" href="../api-reference/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>GamerHouse Technical Documentation</title>
+        <title>User Guide - GamerHouse Technical Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gamerhouse-technical-document" class="md-skip">
+        <a href="#use-roles-and-permissions" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="GamerHouse Technical Documentation" class="md-header__button md-logo" aria-label="GamerHouse Technical Documentation" data-md-component="logo">
+    <a href=".." title="GamerHouse Technical Documentation" class="md-header__button md-logo" aria-label="GamerHouse Technical Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              User Guide
             
           </span>
         </div>
@@ -189,11 +191,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -212,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="architecture/" class="md-tabs__link">
+      <a href="../architecture/" class="md-tabs__link">
         
   
   
@@ -229,9 +229,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="roles-permissions/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -250,7 +252,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="api-reference/" class="md-tabs__link">
+      <a href="../api-reference/" class="md-tabs__link">
         
   
   
@@ -287,7 +289,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="GamerHouse Technical Documentation" class="md-nav__button md-logo" aria-label="GamerHouse Technical Documentation" data-md-component="logo">
+    <a href=".." title="GamerHouse Technical Documentation" class="md-nav__button md-logo" aria-label="GamerHouse Technical Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -297,6 +299,50 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
     
       
       
@@ -319,7 +365,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    User Guide
     
   </span>
   
@@ -327,12 +373,12 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Home
+    User Guide
     
   </span>
   
@@ -355,54 +401,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-overview" class="md-nav__link">
+  <a href="#user-roles" class="md-nav__link">
     <span class="md-ellipsis">
-      Project Overview
+      User Roles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Roles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gamer
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#problem-statement" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem Statement
+      Admin
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objectives
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope-of-the-project" class="md-nav__link">
+  <a href="#permission-matrix" class="md-nav__link">
     <span class="md-ellipsis">
-      Scope of the Project
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technology-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technology Stack
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
+      Permission Matrix
     </span>
   </a>
   
@@ -423,51 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="architecture/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Architecture
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="roles-permissions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    User Guide
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="api-reference/" class="md-nav__link">
+      <a href="../api-reference/" class="md-nav__link">
         
   
   
@@ -511,54 +501,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-overview" class="md-nav__link">
+  <a href="#user-roles" class="md-nav__link">
     <span class="md-ellipsis">
-      Project Overview
+      User Roles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Roles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gamer
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#problem-statement" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem Statement
+      Admin
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objectives
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope-of-the-project" class="md-nav__link">
+  <a href="#permission-matrix" class="md-nav__link">
     <span class="md-ellipsis">
-      Scope of the Project
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technology-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technology Stack
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
+      Permission Matrix
     </span>
   </a>
   
@@ -582,44 +560,97 @@
 
 
 
-<h1 id="gamerhouse-technical-document">GamerHouse – Technical Document<a class="headerlink" href="#gamerhouse-technical-document" title="Permanent link">&para;</a></h1>
-<h2 id="project-overview">Project Overview<a class="headerlink" href="#project-overview" title="Permanent link">&para;</a></h2>
-<p>GamerHouse is a REST-based backend system that allows users to <strong>maintain a private, personalized gaming library</strong>. Authenticated users can track games they are playing, wish to play, or have completed, along with progress details such as hours played, personal ratings, and notes.</p>
-<p>The system is designed to be <strong>simple, secure, and user-centric</strong>, following Django and Django REST Framework best practices. All gaming data is owned by individual users and is not shared publicly.</p>
-<h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
-<p>Gamers often play multiple games across platforms and struggle to keep track of their progress and preferences. Existing solutions are either public or unnecessarily complex.</p>
-<p>There is a need for a <strong>simple, authenticated REST API</strong> that enables users to:</p>
+<h1 id="use-roles-and-permissions">Use Roles and Permissions<a class="headerlink" href="#use-roles-and-permissions" title="Permanent link">&para;</a></h1>
+<h2 id="user-roles">User Roles<a class="headerlink" href="#user-roles" title="Permanent link">&para;</a></h2>
+<h3 id="gamer">Gamer<a class="headerlink" href="#gamer" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Maintain a personal list of games</li>
-<li>Track game status and progress</li>
-<li>Store gaming metadata securely</li>
-<li>Perform CRUD operations on their own gaming data</li>
+<li>Register and authenticate</li>
+<li>Create, read, update, and delete <strong>their own games</strong></li>
+<li>Track:<ul>
+<li>Status (Wishlist, Playing, Completed, Dropped)</li>
+<li>Platform played</li>
+<li>Hours played</li>
+<li>Personal rating</li>
+<li>Notes</li>
 </ul>
-<h2 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+</li>
+<li>Cannot access other users’ data</li>
+</ul>
+<h3 id="admin">Admin<a class="headerlink" href="#admin" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Implement a complete user authentication flow</li>
-<li>Enable CRUD operations for user-owned gaming content</li>
-<li>Use Enums, Constants, and Environment Variables</li>
-<li>Enforce strict user-level data isolation</li>
-<li>Follow clean Django project and app structuring</li>
+<li>View and manage user accounts</li>
+<li>Soft delete or deactivate users</li>
+<li>Manage system-defined genres and platforms</li>
+<li>Does <strong>not</strong> manage or modify user game entries</li>
+<li>Admin users cannot be deleted via any API endpoint.</li>
 </ul>
-<h2 id="scope-of-the-project">Scope of the Project<a class="headerlink" href="#scope-of-the-project" title="Permanent link">&para;</a></h2>
-<ul>
-<li>User registration and authentication (JWT)</li>
-<li>Role-based access control (Admin, Gamer)</li>
-<li>User-owned game management</li>
-<li>Game progress and status tracking</li>
-<li>Admin-managed reference data (genres, platforms)</li>
-</ul>
-<h2 id="technology-stack">Technology Stack<a class="headerlink" href="#technology-stack" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Backend Framework:</strong> Django, Django REST Framework</li>
-<li><strong>Authentication:</strong> JWT (Access &amp; Refresh tokens)</li>
-<li><strong>Database:</strong> PostgreSQL </li>
-<li><strong>ORM:</strong> Django ORM</li>
-</ul>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>GamerHouse is designed as a <strong>secure, simple, and user-focused backend system</strong> that directly aligns with the project PRD. The architecture prioritizes correctness, clarity, and maintainability while demonstrating strong fundamentals in Django, Django REST Framework, authentication, authorization, and RESTful API design.</p>
+<h2 id="permission-matrix">Permission Matrix<a class="headerlink" href="#permission-matrix" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action / Resource</th>
+<th style="text-align: center;">Gamer</th>
+<th style="text-align: center;">Admin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Register / Login</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔ <em>(Can login)</em></td>
+</tr>
+<tr>
+<td>View own profile</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Update own profile</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Delete own account</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✖ <em>(blocked)</em></td>
+</tr>
+<tr>
+<td>View other users</td>
+<td style="text-align: center;">✖</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Update other users</td>
+<td style="text-align: center;">✖</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Delete other users</td>
+<td style="text-align: center;">✖</td>
+<td style="text-align: center;">✔ <em>(except admins)</em></td>
+</tr>
+<tr>
+<td>View all games</td>
+<td style="text-align: center;">✔ <em>(own only)</em></td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Create / Edit Games</td>
+<td style="text-align: center;">✔ <em>(own only)</em></td>
+<td style="text-align: center;">✖</td>
+</tr>
+<tr>
+<td>View Genres / Platforms</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Manage Genres / Platforms</td>
+<td style="text-align: center;">✖</td>
+<td style="text-align: center;">✔</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -679,10 +710,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
