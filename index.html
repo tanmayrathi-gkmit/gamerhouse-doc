@@ -103,6 +103,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#api-conventions" class="nav-link">API Conventions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#authentication-authorization-strategy" class="nav-link">Authentication &amp; Authorization Strategy</a>
               <ul class="nav flex-column">
               </ul>
@@ -487,6 +491,25 @@ POST  /platforms (admin only)
 GET   /platforms/{id} 
 PATCH /platforms/{id} (admin only)
 </code></pre>
+<h2 id="api-conventions">API Conventions</h2>
+<h4 id="success-response">Success Response</h4>
+<pre><code class="language-json">{ &quot;data&quot;: { ... } }
+</code></pre>
+<h4 id="paginated-response">Paginated Response</h4>
+<pre><code class="language-json">{
+  &quot;count&quot;: 42,
+  &quot;page&quot;: 1,
+  &quot;page_size&quot;: 10,
+  &quot;next&quot;: &quot;...&quot;,
+  &quot;previous&quot;: null,
+  &quot;data&quot;: [ ... ]
+}
+</code></pre>
+<h4 id="error-response">Error Response</h4>
+<pre><code class="language-json">{
+  &quot;error&quot;: { ... }
+}
+</code></pre>
 <h2 id="authentication-authorization-strategy">Authentication &amp; Authorization Strategy</h2>
 <ul>
 <li>JWT-based authentication</li>
@@ -578,5 +601,5 @@ PATCH /platforms/{id} (admin only)
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2026-01-07 06:25:49.208377+00:00
+Build Date UTC : 2026-01-07 06:32:21.212642+00:00
 -->
