@@ -2317,8 +2317,9 @@
 <h2 id="1-authentication-endpoints">1. Authentication Endpoints<a class="headerlink" href="#1-authentication-endpoints" title="Permanent link">&para;</a></h2>
 <h3 id="11-register-gamer">1.1 Register Gamer<a class="headerlink" href="#11-register-gamer" title="Permanent link">&para;</a></h3>
 <p><strong>Purpose:</strong> Register a new gamer user for a specific tenant</p>
-<p><strong>Endpoint:</strong> <code>POST /auth/tenant/{tenant_id}/register/</code></p>
-<p><strong>Auth Required:</strong> No</p>
+<p><strong>Endpoint:</strong> <code>POST /auth/register/</code></p>
+<p><strong>Header:</strong> <code>X-Tenant-ID</code>: <code>tenant_id</code>
+<strong>Auth Required:</strong> No</p>
 <p><strong>Request Body:</strong>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>

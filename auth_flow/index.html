@@ -611,7 +611,7 @@
 <h1 id="authentication-authorization-flow">Authentication &amp; Authorization Flow<a class="headerlink" href="#authentication-authorization-flow" title="Permanent link">&para;</a></h1>
 <h2 id="registration-email-verification">Registration &amp; Email Verification<a class="headerlink" href="#registration-email-verification" title="Permanent link">&para;</a></h2>
 <ol>
-<li>User submits <code>username</code>, <code>email</code>, <code>password</code> to <code>POST /api/v1/auth/tenant/&lt;tenant_id&gt;/register/</code><ul>
+<li>User submits <code>username</code>, <code>email</code>, <code>password</code> to <code>POST /api/v1/auth/register/</code>, tenant passed in header <code>X-Tenant-ID</code><ul>
 <li><strong>Validations</strong>: Tenant exists, email/username unique, password strength</li>
 </ul>
 </li>
