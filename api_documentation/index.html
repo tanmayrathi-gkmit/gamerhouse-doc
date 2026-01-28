@@ -1,0 +1,3740 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../api/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>API Documentation - GamerHouse System Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gamerhouse-api-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="GamerHouse System Documentation" class="md-header__button md-logo" aria-label="GamerHouse System Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GamerHouse System Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modules/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Modules
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../permissions/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Permissions
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../auth_flow/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Auth Flow
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Documentation
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GamerHouse System Documentation" class="md-nav__button md-logo" aria-label="GamerHouse System Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GamerHouse System Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Permissions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auth Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API Documentation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Documentation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Roles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-authentication-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Authentication Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Authentication Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-register-gamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Register Gamer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-refresh-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Refresh Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-logout" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Logout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-verify-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Verify Email
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-forgot-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Forgot Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-reset-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 Reset Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-verify-login-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8 Verify Login (OTP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-resend-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9 Resend Verification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-user-management-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. User Management (Admin)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. User Management (Admin)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-list-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 List Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-get-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Get User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-create-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Create User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-delete-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Delete User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-disable-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Disable User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-restore-deleted-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 Restore Deleted User
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-user-management-self" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. User Management (Self)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. User Management (Self)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-get-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Get Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-update-self-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Update Self Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-change-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Change Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-delete-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Delete Account
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tenant-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tenant Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Tenant Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-list-tenants" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 List Tenants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-get-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Get Tenant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-create-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Create Tenant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-update-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Update Tenant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-delete-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Delete Tenant
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-genre-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Genre Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Genre Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-list-genres" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 List Genres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-get-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Get Genre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-add-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Add Genre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-update-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Update Genre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-delete-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Delete Genre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-game-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Game Catalog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Game Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-list-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 List Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-get-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Get Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-add-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Add Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-update-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Update Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-delete-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Delete Game
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-platform-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Platform Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Platform Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-list-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 List Platforms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-get-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Get Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-add-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Add Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-update-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 Update Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-delete-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 Delete Platform
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Tenant Games
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Tenant Games">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-list-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 List Tenant Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-add-tenant-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 Add Tenant Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-bulk-add-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 Bulk Add Tenant Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-bulk-delete-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4 Bulk Delete Tenant Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-delete-tenant-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.5 Delete Tenant Game
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-user-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. User Games
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. User Games">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-list-user-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 List User Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-get-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 Get User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-create-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 Create User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-update-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 Update User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-delete-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5 Delete User Game
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-user-game-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. User Game Notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. User Game Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-list-notes-for-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 List Notes for User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-get-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 Get Note
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-add-note-to-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3 Add Note to User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104-update-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4 Update Note
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#105-delete-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.5 Delete Note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-payments" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Payments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Payments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-create-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 Create Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-verify-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 Verify Payment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-razorpay-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.3 Razorpay Webhook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-list-subscriptions-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.4 List Subscriptions (Admin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-list-payments-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.5 List Payments (Admin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-list-webhook-events-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.6 List Webhook Events (Admin)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-error-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Error Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Error Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#400-bad-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      400 Bad Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#401-unauthorized" class="md-nav__link">
+    <span class="md-ellipsis">
+      401 Unauthorized
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#403-forbidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      403 Forbidden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#404-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      404 Not Found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#500-internal-server-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Definitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tenant-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tenant Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genre-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genre Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-game-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Game Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagination-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagination Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Roles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-authentication-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Authentication Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Authentication Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-register-gamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Register Gamer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-refresh-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Refresh Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-logout" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Logout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-verify-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Verify Email
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-forgot-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Forgot Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-reset-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 Reset Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-verify-login-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8 Verify Login (OTP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-resend-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9 Resend Verification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-user-management-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. User Management (Admin)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. User Management (Admin)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-list-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 List Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-get-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Get User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-create-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Create User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-delete-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Delete User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-disable-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Disable User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-restore-deleted-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 Restore Deleted User
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-user-management-self" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. User Management (Self)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. User Management (Self)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-get-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Get Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-update-self-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Update Self Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-change-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Change Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-delete-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Delete Account
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tenant-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tenant Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Tenant Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-list-tenants" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 List Tenants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-get-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Get Tenant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-create-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Create Tenant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-update-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Update Tenant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-delete-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Delete Tenant
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-genre-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Genre Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Genre Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-list-genres" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 List Genres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-get-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Get Genre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-add-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Add Genre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-update-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Update Genre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-delete-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Delete Genre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-game-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Game Catalog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Game Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-list-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 List Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-get-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Get Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-add-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Add Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-update-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Update Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-delete-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Delete Game
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-platform-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Platform Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Platform Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-list-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 List Platforms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-get-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Get Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-add-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Add Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-update-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 Update Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-delete-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 Delete Platform
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Tenant Games
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Tenant Games">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-list-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 List Tenant Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-add-tenant-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 Add Tenant Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-bulk-add-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 Bulk Add Tenant Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-bulk-delete-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4 Bulk Delete Tenant Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-delete-tenant-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.5 Delete Tenant Game
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-user-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. User Games
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. User Games">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-list-user-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 List User Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-get-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 Get User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-create-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 Create User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-update-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 Update User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-delete-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5 Delete User Game
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-user-game-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. User Game Notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. User Game Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-list-notes-for-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 List Notes for User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-get-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 Get Note
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-add-note-to-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3 Add Note to User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104-update-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4 Update Note
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#105-delete-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.5 Delete Note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-payments" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Payments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Payments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-create-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 Create Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-verify-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 Verify Payment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-razorpay-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.3 Razorpay Webhook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-list-subscriptions-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.4 List Subscriptions (Admin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-list-payments-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.5 List Payments (Admin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-list-webhook-events-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.6 List Webhook Events (Admin)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-error-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Error Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Error Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#400-bad-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      400 Bad Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#401-unauthorized" class="md-nav__link">
+    <span class="md-ellipsis">
+      401 Unauthorized
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#403-forbidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      403 Forbidden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#404-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      404 Not Found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#500-internal-server-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Definitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tenant-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tenant Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genre-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genre Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-game-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Game Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagination-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagination Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="gamerhouse-api-documentation">GamerHouse API Documentation<a class="headerlink" href="#gamerhouse-api-documentation" title="Permanent link">&para;</a></h1>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#authentication">Authentication</a></li>
+<li><a href="#endpoint-overview">Endpoint Overview</a></li>
+<li><a href="#1-authentication-endpoints">Authentication Endpoints</a></li>
+<li><a href="#2-user-management-admin">User Management (Admin)</a></li>
+<li><a href="#3-user-management-self">User Management (Self)</a></li>
+<li><a href="#4-tenant-management">Tenant Management</a></li>
+<li><a href="#5-genre-management">Genre Management</a></li>
+<li><a href="#6-game-catalog">Game Catalog</a></li>
+<li><a href="#7-platform-management">Platform Management</a></li>
+<li><a href="#8-tenant-games">Tenant Games</a></li>
+<li><a href="#9-user-games">User Games</a></li>
+<li><a href="#10-user-game-notes">User Game Notes</a></li>
+<li><a href="#11-payments">Payments</a></li>
+<li><a href="#common-error-responses">Common Error Responses</a></li>
+</ol>
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
+<p>The API uses <strong>JWT (JSON Web Token)</strong> authentication. Include the access token in the <code>Authorization</code> header:</p>
+<div class="highlight"><pre><span></span><code>Authorization: Bearer &lt;access_token&gt;
+</code></pre></div>
+<h3 id="user-roles">User Roles<a class="headerlink" href="#user-roles" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>super_admin</strong>: Full system access</li>
+<li><strong>admin</strong>: Tenant administrator access</li>
+<li><strong>gamer</strong>: Regular user access</li>
+</ul>
+<h2 id="1-authentication-endpoints">1. Authentication Endpoints<a class="headerlink" href="#1-authentication-endpoints" title="Permanent link">&para;</a></h2>
+<h3 id="11-register-gamer">1.1 Register Gamer<a class="headerlink" href="#11-register-gamer" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Register a new gamer user for a specific tenant</p>
+<p><strong>Endpoint:</strong> <code>POST /auth/tenant/{tenant_id}/register/</code></p>
+<p><strong>Auth Required:</strong> No</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (email)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;confirm_password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<strong>Success Response (201 Created):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Registration successful. Please verify your email.&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Error Response (400 Bad Request):</strong>
+<div class="highlight"><pre><span></span><code>{
+  &quot;error&quot;: {
+    &quot;username&quot;: [&quot;Username already exists.&quot;],
+    &quot;email&quot;: [&quot;Email already exists.&quot;]
+  }
+}
+</code></pre></div></p>
+<h3 id="12-login">1.2 Login<a class="headerlink" href="#12-login" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Authenticate user and receive JWT tokens</p>
+<p><strong>Endpoint:</strong> <code>POST /auth/login/</code></p>
+<p><strong>Auth Required:</strong> No</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (email)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OTP sent to email.&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="13-refresh-token">1.3 Refresh Token<a class="headerlink" href="#13-refresh-token" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Obtain a new access token using refresh token</p>
+<p><strong>Endpoint:</strong> <code>POST /auth/refresh/</code></p>
+<p><strong>Auth Required:</strong> No</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;refresh&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (JWT refresh token)&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;access&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;refresh&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="14-logout">1.4 Logout<a class="headerlink" href="#14-logout" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Blacklist refresh token to log out user</p>
+<p><strong>Endpoint:</strong> <code>POST /auth/logout/</code></p>
+<p><strong>Auth Required:</strong> Yes</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;refresh&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (JWT refresh token)&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong></p>
+<h3 id="15-verify-email">1.5 Verify Email<a class="headerlink" href="#15-verify-email" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Verify user email address using token</p>
+<p><strong>Endpoint:</strong> <code>GET /auth/verify-email/?token={token}</code></p>
+<p><strong>Auth Required:</strong> No</p>
+<p><strong>Query Parameters:</strong>
+- <code>token</code> (required): Email verification token</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Email verified successfully&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="16-forgot-password">1.6 Forgot Password<a class="headerlink" href="#16-forgot-password" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Request password reset email</p>
+<p><strong>Endpoint:</strong> <code>POST /auth/forgot-password/</code></p>
+<p><strong>Auth Required:</strong> No</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (email)&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A reset link has been sent.&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="17-reset-password">1.7 Reset Password<a class="headerlink" href="#17-reset-password" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Request password reset email</p>
+<p><strong>Endpoint:</strong> <code>POST /auth/reset-password/</code></p>
+<p><strong>Auth Required:</strong> No</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;confirm_password&quot;</span><span class="p">:</span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Password reset successful&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="18-verify-login-otp">1.8 Verify Login (OTP)<a class="headerlink" href="#18-verify-login-otp" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Verify login with OTP</p>
+<p><strong>Endpoint:</strong> <code>POST /auth/verify-login/</code></p>
+<p><strong>Auth Required:</strong> No</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (email)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;otp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (6 digits)&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;access&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;refresh&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="19-resend-verification">1.9 Resend Verification<a class="headerlink" href="#19-resend-verification" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Resend email verification link</p>
+<p><strong>Endpoint:</strong> <code>POST /auth/resend-verification/</code></p>
+<p><strong>Auth Required:</strong> No</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (email)&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Verification mail sent.&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="2-user-management-admin">2. User Management (Admin)<a class="headerlink" href="#2-user-management-admin" title="Permanent link">&para;</a></h2>
+<h3 id="21-list-users">2.1 List Users<a class="headerlink" href="#21-list-users" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get paginated list of all users</p>
+<p><strong>Endpoint:</strong> <code>GET /users/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Query Parameters:</strong>
+- <code>page</code> (optional): Page number (default: 1)
+- <code>page_size</code> (optional): Items per page (default: 10)
+- <code>status</code> (optional): Filter by status (<code>active</code>, <code>deleted</code>)</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;is_active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-12-31T14:06:07.196292Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-12-31T14:06:07.196298Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Error Response (403 Forbidden):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;You do not have permission to perform this action.&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="22-get-user">2.2 Get User<a class="headerlink" href="#22-get-user" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get details of a specific user</p>
+<p><strong>Endpoint:</strong> <code>GET /users/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): User UUID</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;is_active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-12-31T14:06:07.196292Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-12-31T14:06:07.196298Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="23-create-user">2.3 Create User<a class="headerlink" href="#23-create-user" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Create a new user (admin only)</p>
+<p><strong>Endpoint:</strong> <code>POST /users/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (email)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;confirm_password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tenant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid (tenant ID)&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (201 Created):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Verification mail sent.&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="24-delete-user">2.4 Delete User<a class="headerlink" href="#24-delete-user" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Soft delete a user</p>
+<p><strong>Endpoint:</strong> <code>DELETE /users/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): User UUID</p>
+<p><strong>Success Response (204 No Content):</strong>
+<div class="highlight"><pre><span></span><code>(Empty response body)
+</code></pre></div></p>
+<h3 id="25-disable-user">2.5 Disable User<a class="headerlink" href="#25-disable-user" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Disable/enable a user account</p>
+<p><strong>Endpoint:</strong> <code>PATCH /users/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): User UUID</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;is_active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;is_active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-01T20:52:55.715907Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-01T21:05:37.380412Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="26-restore-deleted-user">2.6 Restore Deleted User<a class="headerlink" href="#26-restore-deleted-user" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Restore a soft-deleted user</p>
+<p><strong>Endpoint:</strong> <code>POST /users/{id}/restore-user/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): User UUID</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User restored successfully.&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="3-user-management-self">3. User Management (Self)<a class="headerlink" href="#3-user-management-self" title="Permanent link">&para;</a></h2>
+<h3 id="31-get-profile">3.1 Get Profile<a class="headerlink" href="#31-get-profile" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get current user's profile</p>
+<p><strong>Endpoint:</strong> <code>GET /users/me/</code></p>
+<p><strong>Auth Required:</strong> Yes (All roles)</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-01T19:19:42.708421Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="32-update-self-profile">3.2 Update Self Profile<a class="headerlink" href="#32-update-self-profile" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Update current user's profile</p>
+<p><strong>Endpoint:</strong> <code>PATCH /users/me/</code></p>
+<p><strong>Auth Required:</strong> Yes (All roles)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rathi&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-01T19:19:42.708421Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="33-change-password">3.3 Change Password<a class="headerlink" href="#33-change-password" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Change current user's password</p>
+<p><strong>Endpoint:</strong> <code>POST /users/me/change-password/</code></p>
+<p><strong>Auth Required:</strong> Yes (All roles)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;old_password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;new_password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong></p>
+<h3 id="34-delete-account">3.4 Delete Account<a class="headerlink" href="#34-delete-account" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Delete current user's account</p>
+<p><strong>Endpoint:</strong> <code>DELETE /users/me/</code></p>
+<p><strong>Auth Required:</strong> Yes (All roles)</p>
+<p><strong>Success Response (204 No Content):</strong>
+<div class="highlight"><pre><span></span><code>(Empty response body)
+</code></pre></div></p>
+<h2 id="4-tenant-management">4. Tenant Management<a class="headerlink" href="#4-tenant-management" title="Permanent link">&para;</a></h2>
+<h3 id="41-list-tenants">4.1 List Tenants<a class="headerlink" href="#41-list-tenants" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get list of all tenants</p>
+<p><strong>Endpoint:</strong> <code>GET /tenants/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin - own tenant only)</p>
+<p><strong>Query Parameters:</strong>
+- <code>page</code> (optional): Page number
+- <code>page_size</code> (optional): Items per page</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Power Gamer Zone&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T06:47:51.178263Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T06:47:51.178282Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="42-get-tenant">4.2 Get Tenant<a class="headerlink" href="#42-get-tenant" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get details of a specific tenant</p>
+<p><strong>Endpoint:</strong> <code>GET /tenants/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin - own tenant only)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Tenant UUID</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Power Gaming Zone&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-27T16:15:11.632002Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-27T16:15:11.632013Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="43-create-tenant">4.3 Create Tenant<a class="headerlink" href="#43-create-tenant" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Create a new tenant</p>
+<p><strong>Endpoint:</strong> <code>POST /tenants/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (201 Created):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Power Gaming Zone&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-27T16:15:11.632002Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-27T16:15:11.632013Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="44-update-tenant">4.4 Update Tenant<a class="headerlink" href="#44-update-tenant" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Update tenant details</p>
+<p><strong>Endpoint:</strong> <code>PATCH /tenants/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin - own tenant only)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Tenant UUID</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Power Gamer Zone&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T06:47:51.178263Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T09:34:07.454248Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="45-delete-tenant">4.5 Delete Tenant<a class="headerlink" href="#45-delete-tenant" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Delete a tenant</p>
+<p><strong>Endpoint:</strong> <code>DELETE /tenants/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Tenant UUID</p>
+<p><strong>Success Response (204 No Content):</strong>
+<div class="highlight"><pre><span></span><code>(Empty response body)
+</code></pre></div></p>
+<h2 id="5-genre-management">5. Genre Management<a class="headerlink" href="#5-genre-management" title="Permanent link">&para;</a></h2>
+<h3 id="51-list-genres">5.1 List Genres<a class="headerlink" href="#51-list-genres" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get paginated list of all game genres</p>
+<p><strong>Endpoint:</strong> <code>GET /genres/</code></p>
+<p><strong>Auth Required:</strong> Yes (All roles - Read access)</p>
+<p><strong>Query Parameters:</strong>
+- <code>page</code> (optional): Page number
+- <code>page_size</code> (optional): Items per page
+- <code>search</code> (optional): Search by name</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Action&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.494877Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.494885Z&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RPG&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.496183Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.496190Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="52-get-genre">5.2 Get Genre<a class="headerlink" href="#52-get-genre" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get details of a specific genre</p>
+<p><strong>Endpoint:</strong> <code>GET /genres/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (All roles - Read access)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Genre UUID</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FPS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:15:31.007665Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:15:31.007685Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="53-add-genre">5.3 Add Genre<a class="headerlink" href="#53-add-genre" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Create a new genre</p>
+<p><strong>Endpoint:</strong> <code>POST /genres/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (201 Created):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FPS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:15:31.007665Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:15:31.007685Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Error Response (400 Bad Request):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;genre with this name already exists.&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="54-update-genre">5.4 Update Genre<a class="headerlink" href="#54-update-genre" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Update genre details</p>
+<p><strong>Endpoint:</strong> <code>PATCH /genres/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Genre UUID</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TPS&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:15:31.007665Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:17:52.739928Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="55-delete-genre">5.5 Delete Genre<a class="headerlink" href="#55-delete-genre" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Delete a genre</p>
+<p><strong>Endpoint:</strong> <code>DELETE /genres/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Genre UUID</p>
+<p><strong>Success Response (204 No Content):</strong>
+<div class="highlight"><pre><span></span><code>(Empty response body)
+</code></pre></div></p>
+<h2 id="6-game-catalog">6. Game Catalog<a class="headerlink" href="#6-game-catalog" title="Permanent link">&para;</a></h2>
+<h3 id="61-list-games">6.1 List Games<a class="headerlink" href="#61-list-games" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get paginated list of all games in catalog</p>
+<p><strong>Endpoint:</strong> <code>GET /games/</code></p>
+<p><strong>Auth Required:</strong> Yes (All roles - Read access)</p>
+<p><strong>Query Parameters:</strong>
+- <code>page</code> (optional): Page number
+- <code>page_size</code> (optional): Items per page
+- <code>search</code> (optional): Search by title
+- <code>genre</code> (optional): Filter by genre UUID (comma-separated)
+- <code>platforms</code> (optional): Filter by platform UUIDs (comma-separated)</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:8000/api/v1/games/?page=2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Game Title&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Game description text&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;release_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-04-11&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;platforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uuid1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid2&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.878636Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.878643Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="62-get-game">6.2 Get Game<a class="headerlink" href="#62-get-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get details of a specific game</p>
+<p><strong>Endpoint:</strong> <code>GET /games/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (All roles - Read access)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Game UUID</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Game Title&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Game description&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;release_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-04-11&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;platforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uuid1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid3&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.878636Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.878643Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="63-add-game">6.3 Add Game<a class="headerlink" href="#63-add-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Add a new game to catalog</p>
+<p><strong>Endpoint:</strong> <code>POST /games/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;release_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YYYY-MM-DD&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;platforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uuid1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid2&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (201 Created):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cyber Adventure&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;An amazing open-world cyberpunk RPG.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;release_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-10&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;platforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uuid1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid2&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.878636Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.878643Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="64-update-game">6.4 Update Game<a class="headerlink" href="#64-update-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Update game details</p>
+<p><strong>Endpoint:</strong> <code>PATCH /games/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Game UUID</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;release_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YYYY-MM-DD&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;platforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uuid1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid2&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Updated Title&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Updated description&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;release_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-10&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;platforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uuid1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid2&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.878636Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T06:00:00.000000Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="65-delete-game">6.5 Delete Game<a class="headerlink" href="#65-delete-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Delete a game from catalog</p>
+<p><strong>Endpoint:</strong> <code>DELETE /games/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Game UUID</p>
+<p><strong>Success Response (204 No Content):</strong>
+<div class="highlight"><pre><span></span><code>(Empty response body)
+</code></pre></div></p>
+<h2 id="7-platform-management">7. Platform Management<a class="headerlink" href="#7-platform-management" title="Permanent link">&para;</a></h2>
+<h3 id="71-list-platforms">7.1 List Platforms<a class="headerlink" href="#71-list-platforms" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get list of all gaming platforms</p>
+<p><strong>Endpoint:</strong> <code>GET /platforms/</code></p>
+<p><strong>Auth Required:</strong> Yes (All roles - Read access)</p>
+<p><strong>Query Parameters:</strong>
+- <code>page</code> (optional): Page number
+- <code>page_size</code> (optional): Items per page
+- <code>search</code> (optional): Search by name</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PlayStation 5&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.494877Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.494885Z&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Xbox Series X&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.496183Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.496190Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="72-get-platform">7.2 Get Platform<a class="headerlink" href="#72-get-platform" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get details of a specific platform</p>
+<p><strong>Endpoint:</strong> <code>GET /platforms/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (All roles - Read access)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Platform UUID</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PC&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:15:31.007665Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:15:31.007685Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="73-add-platform">7.3 Add Platform<a class="headerlink" href="#73-add-platform" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Create a new platform</p>
+<p><strong>Endpoint:</strong> <code>POST /platforms/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (201 Created):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Nintendo Switch&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:15:31.007665Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:15:31.007685Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="74-update-platform">7.4 Update Platform<a class="headerlink" href="#74-update-platform" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Update platform details</p>
+<p><strong>Endpoint:</strong> <code>PATCH /platforms/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Platform UUID</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Updated Platform Name&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:15:31.007665Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-02T07:17:52.739928Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="75-delete-platform">7.5 Delete Platform<a class="headerlink" href="#75-delete-platform" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Delete a platform</p>
+<p><strong>Endpoint:</strong> <code>DELETE /platforms/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Platform UUID</p>
+<p><strong>Success Response (204 No Content):</strong>
+<div class="highlight"><pre><span></span><code>(Empty response body)
+</code></pre></div></p>
+<h2 id="8-tenant-games">8. Tenant Games<a class="headerlink" href="#8-tenant-games" title="Permanent link">&para;</a></h2>
+<h3 id="81-list-tenant-games">8.1 List Tenant Games<a class="headerlink" href="#81-list-tenant-games" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get list of games available in tenant's library</p>
+<p><strong>Endpoint:</strong> <code>GET /tenant-games/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin, gamer)</p>
+<p><strong>Query Parameters:</strong>
+- <code>page</code> (optional): Page number
+- <code>page_size</code> (optional): Items per page
+- <code>search</code> (optional): Search by game title</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:8000/api/v1/tenant-games/?page=2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;game&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;game_title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Game Title&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;tenant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.878636Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.878643Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="82-add-tenant-game">8.2 Add Tenant Game<a class="headerlink" href="#82-add-tenant-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Add a single game to tenant's library</p>
+<p><strong>Endpoint:</strong> <code>POST /tenant-games/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;game&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (201 Created):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;game&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;tenant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.878636Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-22T05:56:47.878643Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="83-bulk-add-tenant-games">8.3 Bulk Add Tenant Games<a class="headerlink" href="#83-bulk-add-tenant-games" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Add multiple games to tenant's library at once</p>
+<p><strong>Endpoint:</strong> <code>POST /tenant-games/bulk-add/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;games&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uuid1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid3&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (201 Created):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Games added successfully&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;added_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="84-bulk-delete-tenant-games">8.4 Bulk Delete Tenant Games<a class="headerlink" href="#84-bulk-delete-tenant-games" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Remove multiple games from tenant's library</p>
+<p><strong>Endpoint:</strong> <code>POST /tenant-games/bulk-delete/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;games&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uuid1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uuid3&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Games removed successfully&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;deleted_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="85-delete-tenant-game">8.5 Delete Tenant Game<a class="headerlink" href="#85-delete-tenant-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Remove a single game from tenant's library</p>
+<p><strong>Endpoint:</strong> <code>DELETE /tenant-games/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): Tenant Game UUID</p>
+<p><strong>Success Response (204 No Content):</strong>
+<div class="highlight"><pre><span></span><code>(Empty response body)
+</code></pre></div></p>
+<h2 id="9-user-games">9. User Games<a class="headerlink" href="#9-user-games" title="Permanent link">&para;</a></h2>
+<h3 id="91-list-user-games">9.1 List User Games<a class="headerlink" href="#91-list-user-games" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get list of games in user's personal library</p>
+<p><strong>Endpoint:</strong> <code>GET /user-games/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin, gamer - own games)</p>
+<p><strong>Query Parameters:</strong>
+- <code>page</code> (optional): Page number
+- <code>page_size</code> (optional): Items per page
+- <code>status</code> (optional): Filter by status (<code>playing</code>, <code>completed</code>, <code>wishlist</code>, <code>backlog</code>)
+- <code>search</code> (optional): Search by title</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;COD&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;playing&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;hours_played&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;personal_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;completed_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-06T15:33:11.019035Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-06T15:36:34.282508Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;deleted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="92-get-user-game">9.2 Get User Game<a class="headerlink" href="#92-get-user-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get details of a specific user game</p>
+<p><strong>Endpoint:</strong> <code>GET /user-games/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin, gamer - own game)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): User Game UUID</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Game Title&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Description&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;completed&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hours_played&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;personal_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enjoyed the game a lot. Good challenge.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;completed_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-02-10&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T06:24:30.332032Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T06:24:30.332050Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;deleted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="93-create-user-game">9.3 Create User Game<a class="headerlink" href="#93-create-user-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Add a game to user's personal library</p>
+<p><strong>Endpoint:</strong> <code>POST /user-games/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin, gamer)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (optional)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;playing|completed|wishlist|backlog&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;hours_played&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer (optional)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;personal_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer 1-5 (optional)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (optional)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;completed_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YYYY-MM-DD (optional, required if status=completed)&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (201 Created):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2048&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A puzzle game where the player combines numbers by sliding them up, down, left, or right.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;completed&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hours_played&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;personal_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enjoyed the game a lot. Good challenge.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;completed_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-02-10&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T06:24:30.332032Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T06:24:30.332050Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;deleted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="94-update-user-game">9.4 Update User Game<a class="headerlink" href="#94-update-user-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Update user game details</p>
+<p><strong>Endpoint:</strong> <code>PATCH /user-games/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin, gamer - own game)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): User Game UUID</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (optional)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;hours_played&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer (optional)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;personal_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer 1-5 (optional)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (optional)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;completed_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YYYY-MM-DD (optional)&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;COD&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;playing&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hours_played&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;personal_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;completed_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-06T15:33:11.019035Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-06T15:36:34.282508Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;deleted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Error Response (400 Bad Request):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;personal_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Ensure this value is less than or equal to 5.&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="95-delete-user-game">9.5 Delete User Game<a class="headerlink" href="#95-delete-user-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Delete a game from user's library</p>
+<p><strong>Endpoint:</strong> <code>DELETE /user-games/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin, gamer - own game)</p>
+<p><strong>Path Parameters:</strong>
+- <code>id</code> (required): User Game UUID</p>
+<p><strong>Success Response (204 No Content):</strong>
+<div class="highlight"><pre><span></span><code>(Empty response body)
+</code></pre></div></p>
+<h2 id="10-user-game-notes">10. User Game Notes<a class="headerlink" href="#10-user-game-notes" title="Permanent link">&para;</a></h2>
+<h3 id="101-list-notes-for-user-game">10.1 List Notes for User Game<a class="headerlink" href="#101-list-notes-for-user-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get all notes for a specific user game</p>
+<p><strong>Endpoint:</strong> <code>GET /user-games/{game_id}/notes/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin, gamer - own game)</p>
+<p><strong>Path Parameters:</strong>
+- <code>game_id</code> (required): User Game UUID</p>
+<p><strong>Query Parameters:</strong>
+- <code>page</code> (optional): Page number
+- <code>page_size</code> (optional): Items per page</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;user_game&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is a note about the game&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T06:24:30.332032Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T06:24:30.332050Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="102-get-note">10.2 Get Note<a class="headerlink" href="#102-get-note" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get details of a specific note</p>
+<p><strong>Endpoint:</strong> <code>GET /user-games/{game_id}/notes/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin, gamer - own game)</p>
+<p><strong>Path Parameters:</strong>
+- <code>game_id</code> (required): User Game UUID
+- <code>id</code> (required): Note UUID</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;user_game&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is a note about the game&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T06:24:30.332032Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T06:24:30.332050Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="103-add-note-to-user-game">10.3 Add Note to User Game<a class="headerlink" href="#103-add-note-to-user-game" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Create a new note for a user game</p>
+<p><strong>Endpoint:</strong> <code>POST /user-games/{game_id}/notes/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin, gamer - own game)</p>
+<p><strong>Path Parameters:</strong>
+- <code>game_id</code> (required): User Game UUID</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (201 Created):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;user_game&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is a note about the game&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T06:24:30.332032Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T06:24:30.332050Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="104-update-note">10.4 Update Note<a class="headerlink" href="#104-update-note" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Update an existing note</p>
+<p><strong>Endpoint:</strong> <code>PATCH /user-games/{game_id}/notes/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin, gamer - own game)</p>
+<p><strong>Path Parameters:</strong>
+- <code>game_id</code> (required): User Game UUID
+- <code>id</code> (required): Note UUID</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;user_game&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Updated note content&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T06:24:30.332032Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-07T08:30:00.000000Z&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="105-delete-note">10.5 Delete Note<a class="headerlink" href="#105-delete-note" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Delete a note</p>
+<p><strong>Endpoint:</strong> <code>DELETE /user-games/{game_id}/notes/{id}/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin, gamer - own game)</p>
+<p><strong>Path Parameters:</strong>
+- <code>game_id</code> (required): User Game UUID
+- <code>id</code> (required): Note UUID</p>
+<p><strong>Success Response (204 No Content):</strong>
+<div class="highlight"><pre><span></span><code>(Empty response body)
+</code></pre></div></p>
+<h2 id="11-payments">11. Payments<a class="headerlink" href="#11-payments" title="Permanent link">&para;</a></h2>
+<h3 id="111-create-order">11.1 Create Order<a class="headerlink" href="#111-create-order" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Create a new Razorpay payment order for premium subscription</p>
+<p><strong>Endpoint:</strong> <code>POST /payments/create-order/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INR&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (201 Created):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;order_xxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INR&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;razorpay_key_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rzp_test_xxxxxxxxxxxxx&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="112-verify-payment">11.2 Verify Payment<a class="headerlink" href="#112-verify-payment" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Verify Razorpay payment signature and activate subscription</p>
+<p><strong>Endpoint:</strong> <code>POST /payments/verify/</code></p>
+<p><strong>Auth Required:</strong> Yes (admin)</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;razorpay_payment_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pay_xxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;razorpay_order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;order_xxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;razorpay_signature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;signature_hash_string&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Payment verified successfully&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;subscription&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;tenant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;activated&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;razorpay_order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;order_xxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;razorpay_payment_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pay_xxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INR&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;activated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-27T17:00:00.000000Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Error Response (400 Bad Request):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid payment signature&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="113-razorpay-webhook">11.3 Razorpay Webhook<a class="headerlink" href="#113-razorpay-webhook" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Receive webhook events from Razorpay (for payment status updates)</p>
+<p><strong>Endpoint:</strong> <code>POST /payments/webhook/</code></p>
+<p><strong>Auth Required:</strong> No (Webhook signature verification)</p>
+<p><strong>Headers:</strong>
+- <code>X-Razorpay-Signature</code>: Webhook signature for verification</p>
+<p><strong>Request Body:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;event&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;payment.captured&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;payload&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;payment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;entity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pay_xxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;order_xxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INR&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;captured&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ok&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="114-list-subscriptions-admin">11.4 List Subscriptions (Admin)<a class="headerlink" href="#114-list-subscriptions-admin" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get list of all subscriptions (super admin/admin monitoring)</p>
+<p><strong>Endpoint:</strong> <code>GET /admin/subscriptions/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Query Parameters:</strong>
+- <code>page</code> (optional): Page number
+- <code>page_size</code> (optional): Items per page
+- <code>status</code> (optional): Filter by status (<code>pending</code>, <code>activated</code>, <code>expired</code>, <code>failed</code>)
+- <code>search</code> (optional): Search by tenant name</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;tenant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;tenant_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Power Gaming Zone&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;activated&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;razorpay_order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;order_xxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;razorpay_payment_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pay_xxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INR&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;activated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-27T17:00:00.000000Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-27T16:00:00.000000Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-27T17:00:00.000000Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="115-list-payments-admin">11.5 List Payments (Admin)<a class="headerlink" href="#115-list-payments-admin" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get list of all payment transactions (super admin/admin monitoring)</p>
+<p><strong>Endpoint:</strong> <code>GET /admin/payments/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin, admin)</p>
+<p><strong>Query Parameters:</strong>
+- <code>page</code> (optional): Page number
+- <code>page_size</code> (optional): Items per page
+- <code>status</code> (optional): Filter by status
+- <code>search</code> (optional): Search by tenant name or order ID</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:8000/api/v1/admin/payments/?page=2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;tenant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;tenant_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Power Gaming Zone&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;razorpay_order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;order_xxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;razorpay_payment_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pay_xxxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INR&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;captured&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;card&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-27T17:00:00.000000Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-27T17:00:00.000000Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="116-list-webhook-events-admin">11.6 List Webhook Events (Admin)<a class="headerlink" href="#116-list-webhook-events-admin" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Get list of all webhook events received from Razorpay (super admin monitoring)</p>
+<p><strong>Endpoint:</strong> <code>GET /admin/webhooks/</code></p>
+<p><strong>Auth Required:</strong> Yes (super_admin)</p>
+<p><strong>Query Parameters:</strong>
+- <code>page</code> (optional): Page number
+- <code>page_size</code> (optional): Items per page</p>
+<p><strong>Success Response (200 OK):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://127.0.0.1:8000/api/v1/admin/webhooks/?page=2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;event_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;payment.captured&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;payload&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">      </span><span class="nt">&quot;processed&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-27T17:00:00.000000Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="common-error-responses">Common Error Responses<a class="headerlink" href="#common-error-responses" title="Permanent link">&para;</a></h2>
+<h3 id="400-bad-request">400 Bad Request<a class="headerlink" href="#400-bad-request" title="Permanent link">&para;</a></h3>
+<p>Invalid request data or validation errors.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Error message&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="401-unauthorized">401 Unauthorized<a class="headerlink" href="#401-unauthorized" title="Permanent link">&para;</a></h3>
+<p>Missing or invalid authentication token.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Authentication credentials were not provided.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid or expired token.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="403-forbidden">403 Forbidden<a class="headerlink" href="#403-forbidden" title="Permanent link">&para;</a></h3>
+<p>User doesn't have permission to access the resource.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;You do not have permission to perform this action.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="404-not-found">404 Not Found<a class="headerlink" href="#404-not-found" title="Permanent link">&para;</a></h3>
+<p>Requested resource doesn't exist.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Not found.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="500-internal-server-error">500 Internal Server Error<a class="headerlink" href="#500-internal-server-error" title="Permanent link">&para;</a></h3>
+<p>Server encountered an unexpected error.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Internal server error.&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="schema-definitions">Schema Definitions<a class="headerlink" href="#schema-definitions" title="Permanent link">&para;</a></h2>
+<h3 id="user-object">User Object<a class="headerlink" href="#user-object" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (email)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;super_admin|admin|gamer&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;is_active&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;deleted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601) | null&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="tenant-object">Tenant Object<a class="headerlink" href="#tenant-object" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;active|inactive&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="genre-object">Genre Object<a class="headerlink" href="#genre-object" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="platform-object">Platform Object<a class="headerlink" href="#platform-object" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="game-object">Game Object<a class="headerlink" href="#game-object" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;release_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;date (YYYY-MM-DD)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;platforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uuid&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="user-game-object">User Game Object<a class="headerlink" href="#user-game-object" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (username)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;genre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string | null&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;playing|completed|wishlist|backlog&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;hours_played&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer | null&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;personal_rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer (1-5) | null&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string | null&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;completed_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;date (YYYY-MM-DD) | null&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;deleted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime (ISO 8601) | null&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="pagination-response">Pagination Response<a class="headerlink" href="#pagination-response" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer (total items)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer (current page)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer (items per page)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (URL) | null&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string (URL) | null&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

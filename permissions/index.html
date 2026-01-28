@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../architecture/">
+        <link rel="prev" href="../modules/">
       
       
-        <link rel="next" href="../api-reference/">
+        <link rel="next" href="../auth_flow/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,14 +20,11 @@
     
     
       
-        <title>User Guide - GamerHouse Technical Documentation</title>
+        <title>Permissions - GamerHouse System Documentation</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -56,14 +53,7 @@
   </head>
   
   
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -72,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#use-roles-and-permissions" class="md-skip">
+        <a href="#permissions-authorization-matrix" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +76,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="GamerHouse Technical Documentation" class="md-header__button md-logo" aria-label="GamerHouse Technical Documentation" data-md-component="logo">
+    <a href=".." title="GamerHouse System Documentation" class="md-header__button md-logo" aria-label="GamerHouse System Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,30 +90,18 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            GamerHouse Technical Documentation
+            GamerHouse System Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              User Guide
+              Permissions
             
           </span>
         </div>
       </div>
     </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
-    
-  
-</form>
-      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -199,7 +177,7 @@
   
     
   
-  Home
+  Overview
 
       </a>
     </li>
@@ -212,13 +190,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../architecture/" class="md-tabs__link">
+      <a href="../modules/" class="md-tabs__link">
         
   
   
     
   
-  Architecture
+  Modules
 
       </a>
     </li>
@@ -239,7 +217,7 @@
   
     
   
-  User Guide
+  Permissions
 
       </a>
     </li>
@@ -252,13 +230,51 @@
   
   
     <li class="md-tabs__item">
-      <a href="../api-reference/" class="md-tabs__link">
+      <a href="../auth_flow/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Auth Flow
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api/" class="md-tabs__link">
         
   
   
     
   
   API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api_documentation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Documentation
 
       </a>
     </li>
@@ -289,13 +305,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="GamerHouse Technical Documentation" class="md-nav__button md-logo" aria-label="GamerHouse Technical Documentation" data-md-component="logo">
+    <a href=".." title="GamerHouse System Documentation" class="md-nav__button md-logo" aria-label="GamerHouse System Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    GamerHouse Technical Documentation
+    GamerHouse System Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -312,7 +328,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Overview
     
   </span>
   
@@ -329,12 +345,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
+      <a href="../modules/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Architecture
+    Modules
     
   </span>
   
@@ -365,7 +381,7 @@
   
   
   <span class="md-ellipsis">
-    User Guide
+    Permissions
     
   </span>
   
@@ -378,7 +394,7 @@
   
   
   <span class="md-ellipsis">
-    User Guide
+    Permissions
     
   </span>
   
@@ -401,28 +417,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#user-roles" class="md-nav__link">
+  <a href="#roles" class="md-nav__link">
     <span class="md-ellipsis">
-      User Roles
+      Roles
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="User Roles">
+    <nav class="md-nav" aria-label="Roles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gamer" class="md-nav__link">
+  <a href="#1-super-admin" class="md-nav__link">
     <span class="md-ellipsis">
-      Gamer
+      1. Super Admin
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#admin" class="md-nav__link">
+  <a href="#2-admin-tenant-admin" class="md-nav__link">
     <span class="md-ellipsis">
-      Admin
+      2. Admin (Tenant Admin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Gamer
     </span>
   </a>
   
@@ -457,12 +482,56 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-reference/" class="md-nav__link">
+      <a href="../auth_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auth Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Documentation
     
   </span>
   
@@ -501,28 +570,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#user-roles" class="md-nav__link">
+  <a href="#roles" class="md-nav__link">
     <span class="md-ellipsis">
-      User Roles
+      Roles
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="User Roles">
+    <nav class="md-nav" aria-label="Roles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gamer" class="md-nav__link">
+  <a href="#1-super-admin" class="md-nav__link">
     <span class="md-ellipsis">
-      Gamer
+      1. Super Admin
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#admin" class="md-nav__link">
+  <a href="#2-admin-tenant-admin" class="md-nav__link">
     <span class="md-ellipsis">
-      Admin
+      2. Admin (Tenant Admin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Gamer
     </span>
   </a>
   
@@ -560,94 +638,96 @@
 
 
 
-<h1 id="use-roles-and-permissions">Use Roles and Permissions<a class="headerlink" href="#use-roles-and-permissions" title="Permanent link">&para;</a></h1>
-<h2 id="user-roles">User Roles<a class="headerlink" href="#user-roles" title="Permanent link">&para;</a></h2>
-<h3 id="gamer">Gamer<a class="headerlink" href="#gamer" title="Permanent link">&para;</a></h3>
+<h1 id="permissions-authorization-matrix">Permissions &amp; Authorization Matrix<a class="headerlink" href="#permissions-authorization-matrix" title="Permanent link">&para;</a></h1>
+<h2 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h2>
+<p>The system uses a Role-Based Access Control (RBAC) system with three distinct roles.</p>
+<h3 id="1-super-admin">1. Super Admin<a class="headerlink" href="#1-super-admin" title="Permanent link">&para;</a></h3>
+<p><strong>Scope:</strong> Platform-wide administration.</p>
+<p><strong>Key Capabilities:</strong></p>
 <ul>
-<li>Register and authenticate</li>
-<li>Create, read, update, and delete <strong>their own games</strong></li>
-<li>Track:<ul>
-<li>Status (Wishlist, Playing, Completed, Dropped)</li>
-<li>Platform played</li>
-<li>Hours played</li>
-<li>Personal rating</li>
-<li>Notes</li>
+<li><strong>Tenant Management:</strong> Full control (Create, Read, Update, Delete) over all tenants.</li>
+<li><strong>User Management:</strong> Can manage Admin users across the system.</li>
+<li><strong>Catalog Management:</strong> Exclusive rights to create, update, and delete global resources including Genres, Platforms, and the Global Game Catalog.</li>
+<li><strong>System Access:</strong> Unrestricted access to most system resources, with the exception of private user data (e.g., User Games) where explicit access is not required.</li>
 </ul>
-</li>
-<li>Cannot access other users’ data</li>
-</ul>
-<h3 id="admin">Admin<a class="headerlink" href="#admin" title="Permanent link">&para;</a></h3>
+<h3 id="2-admin-tenant-admin">2. Admin (Tenant Admin)<a class="headerlink" href="#2-admin-tenant-admin" title="Permanent link">&para;</a></h3>
+<p><strong>Scope:</strong> Tenant-level administration.</p>
+<p><strong>Key Capabilities:</strong></p>
 <ul>
-<li>View and manage user accounts</li>
-<li>Soft delete or deactivate users</li>
-<li>Manage system-defined genres and platforms</li>
-<li>Does <strong>not</strong> manage or modify user game entries</li>
-<li>Admin users cannot be deleted via any API endpoint.</li>
+<li><strong>Tenant Management:</strong> Read-only access to their own tenant's details. Cannot see other tenants.</li>
+<li><strong>User Management:</strong> Full control over users (Gamers) within their own tenant. Cannot manage Super Admins or themselves via the User API.</li>
+<li><strong>Tenant Games:</strong> Full control to add or manage games specific to their tenant.</li>
+<li><strong>Catalog Access:</strong> Read-only access to the Global Game Catalog, Genres, and Platforms.</li>
+<li><strong>User Games:</strong> Can view and manage game lists for users within their tenant.</li>
+</ul>
+<h3 id="3-gamer">3. Gamer<a class="headerlink" href="#3-gamer" title="Permanent link">&para;</a></h3>
+<p><strong>Scope:</strong> Personal user data.</p>
+<p><strong>Key Capabilities:</strong></p>
+<ul>
+<li><strong>Self Management:</strong> Can manage their own profile and password.</li>
+<li><strong>User Games:</strong> Full control (Create, Read, Update, Delete) over their own personal game list.</li>
+<li><strong>Tenant Games:</strong> Read-only access to games available in their tenant.</li>
+<li><strong>Catalog Access:</strong> Read-only access to Genres and Platforms. No access to the raw Global Game Catalog.</li>
+<li><strong>Restrictions:</strong> Strictly isolated from other users' data and administrative functions.</li>
 </ul>
 <h2 id="permission-matrix">Permission Matrix<a class="headerlink" href="#permission-matrix" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Action / Resource</th>
-<th style="text-align: center;">Gamer</th>
-<th style="text-align: center;">Admin</th>
+<th>Resource</th>
+<th>Super Admin</th>
+<th>Admin</th>
+<th>Gamer</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Register / Login</td>
-<td style="text-align: center;">✔</td>
-<td style="text-align: center;">✔ <em>(Can login)</em></td>
+<td><strong>Tenants</strong></td>
+<td>Full CRUD</td>
+<td>Read (own only)</td>
+<td>No access</td>
 </tr>
 <tr>
-<td>View own profile</td>
-<td style="text-align: center;">✔</td>
-<td style="text-align: center;">✔</td>
+<td><strong>Users</strong></td>
+<td>CRUD (Admins)</td>
+<td>CRUD (tenant users)</td>
+<td>Read/Update (self)</td>
 </tr>
 <tr>
-<td>Update own profile</td>
-<td style="text-align: center;">✔</td>
-<td style="text-align: center;">✔</td>
+<td><strong>Genres</strong></td>
+<td>Full CRUD</td>
+<td>Read-only</td>
+<td>Read-only</td>
 </tr>
 <tr>
-<td>Delete own account</td>
-<td style="text-align: center;">✔</td>
-<td style="text-align: center;">✖ <em>(blocked)</em></td>
+<td><strong>Platforms</strong></td>
+<td>Full CRUD</td>
+<td>Read-only</td>
+<td>Read-only</td>
 </tr>
 <tr>
-<td>View other users</td>
-<td style="text-align: center;">✖</td>
-<td style="text-align: center;">✔</td>
+<td><strong>Games (Catalog)</strong></td>
+<td>Full CRUD</td>
+<td>Read-only</td>
+<td>No access</td>
 </tr>
 <tr>
-<td>Update other users</td>
-<td style="text-align: center;">✖</td>
-<td style="text-align: center;">✔</td>
+<td><strong>Tenant Games</strong></td>
+<td>Full CRUD</td>
+<td>CRUD (own tenant)</td>
+<td>Read (own tenant)</td>
 </tr>
 <tr>
-<td>Delete other users</td>
-<td style="text-align: center;">✖</td>
-<td style="text-align: center;">✔ <em>(except admins)</em></td>
+<td><strong>User Games</strong></td>
+<td>No access*</td>
+<td>CRUD (tenant users)</td>
+<td>CRUD (own games)</td>
 </tr>
 <tr>
-<td>View all games</td>
-<td style="text-align: center;">✔ <em>(own only)</em></td>
-<td style="text-align: center;">✔</td>
-</tr>
-<tr>
-<td>Create / Edit Games</td>
-<td style="text-align: center;">✔ <em>(own only)</em></td>
-<td style="text-align: center;">✖</td>
-</tr>
-<tr>
-<td>View Genres / Platforms</td>
-<td style="text-align: center;">✔</td>
-<td style="text-align: center;">✔</td>
-</tr>
-<tr>
-<td>Manage Genres / Platforms</td>
-<td style="text-align: center;">✖</td>
-<td style="text-align: center;">✔</td>
+<td><strong>User Game Notes</strong></td>
+<td>No access*</td>
+<td>CRUD (tenant users)</td>
+<td>CRUD (own notes)</td>
 </tr>
 </tbody>
 </table>

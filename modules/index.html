@@ -12,7 +12,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../roles-permissions/">
+        <link rel="next" href="../permissions/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,14 +20,11 @@
     
     
       
-        <title>Architecture - GamerHouse Technical Documentation</title>
+        <title>Modules - GamerHouse System Documentation</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -56,14 +53,7 @@
   </head>
   
   
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -72,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#system-architecture" class="md-skip">
+        <a href="#system-modules" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +76,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="GamerHouse Technical Documentation" class="md-header__button md-logo" aria-label="GamerHouse Technical Documentation" data-md-component="logo">
+    <a href=".." title="GamerHouse System Documentation" class="md-header__button md-logo" aria-label="GamerHouse System Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,30 +90,18 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            GamerHouse Technical Documentation
+            GamerHouse System Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecture
+              Modules
             
           </span>
         </div>
       </div>
     </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
-    
-  
-</form>
-      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -199,7 +177,7 @@
   
     
   
-  Home
+  Overview
 
       </a>
     </li>
@@ -220,7 +198,7 @@
   
     
   
-  Architecture
+  Modules
 
       </a>
     </li>
@@ -233,13 +211,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../roles-permissions/" class="md-tabs__link">
+      <a href="../permissions/" class="md-tabs__link">
         
   
   
     
   
-  User Guide
+  Permissions
 
       </a>
     </li>
@@ -252,13 +230,51 @@
   
   
     <li class="md-tabs__item">
-      <a href="../api-reference/" class="md-tabs__link">
+      <a href="../auth_flow/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Auth Flow
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api/" class="md-tabs__link">
         
   
   
     
   
   API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api_documentation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Documentation
 
       </a>
     </li>
@@ -289,13 +305,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="GamerHouse Technical Documentation" class="md-nav__button md-logo" aria-label="GamerHouse Technical Documentation" data-md-component="logo">
+    <a href=".." title="GamerHouse System Documentation" class="md-nav__button md-logo" aria-label="GamerHouse System Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    GamerHouse Technical Documentation
+    GamerHouse System Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -312,7 +328,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Overview
     
   </span>
   
@@ -343,7 +359,7 @@
   
   
   <span class="md-ellipsis">
-    Architecture
+    Modules
     
   </span>
   
@@ -356,7 +372,7 @@
   
   
   <span class="md-ellipsis">
-    Architecture
+    Modules
     
   </span>
   
@@ -398,9 +414,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#games-module" class="md-nav__link">
+  <a href="#tenants-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Games Module
+      Tenants Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tenant-games-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tenant Games Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#games-module-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Games Module (Catalog)
     </span>
   </a>
   
@@ -419,6 +453,24 @@
   <a href="#platforms-module" class="md-nav__link">
     <span class="md-ellipsis">
       Platforms Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-games-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Games Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payments-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payments Module
     </span>
   </a>
   
@@ -454,46 +506,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#entities" class="md-nav__link">
+  <a href="#indexes-constraints-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Entities
+      Indexes &amp; Constraints Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Entities">
+    <nav class="md-nav" aria-label="Indexes &amp; Constraints Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#users" class="md-nav__link">
+  <a href="#uniqueness" class="md-nav__link">
     <span class="md-ellipsis">
-      Users
+      Uniqueness:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#games" class="md-nav__link">
+  <a href="#performance-indexes" class="md-nav__link">
     <span class="md-ellipsis">
-      Games
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#genres" class="md-nav__link">
-    <span class="md-ellipsis">
-      Genres
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#platforms" class="md-nav__link">
-    <span class="md-ellipsis">
-      Platforms
+      Performance Indexes:
     </span>
   </a>
   
@@ -501,39 +535,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enums" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enums
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Enums">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#game-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      Game Status
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#indexes-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      Indexes &amp; Constraints
-    </span>
-  </a>
   
 </li>
       
@@ -552,12 +553,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../roles-permissions/" class="md-nav__link">
+      <a href="../permissions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    User Guide
+    Permissions
     
   </span>
   
@@ -574,12 +575,56 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-reference/" class="md-nav__link">
+      <a href="../auth_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auth Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Documentation
     
   </span>
   
@@ -637,9 +682,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#games-module" class="md-nav__link">
+  <a href="#tenants-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Games Module
+      Tenants Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tenant-games-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tenant Games Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#games-module-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Games Module (Catalog)
     </span>
   </a>
   
@@ -658,6 +721,24 @@
   <a href="#platforms-module" class="md-nav__link">
     <span class="md-ellipsis">
       Platforms Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-games-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Games Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payments-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payments Module
     </span>
   </a>
   
@@ -693,46 +774,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#entities" class="md-nav__link">
+  <a href="#indexes-constraints-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Entities
+      Indexes &amp; Constraints Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Entities">
+    <nav class="md-nav" aria-label="Indexes &amp; Constraints Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#users" class="md-nav__link">
+  <a href="#uniqueness" class="md-nav__link">
     <span class="md-ellipsis">
-      Users
+      Uniqueness:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#games" class="md-nav__link">
+  <a href="#performance-indexes" class="md-nav__link">
     <span class="md-ellipsis">
-      Games
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#genres" class="md-nav__link">
-    <span class="md-ellipsis">
-      Genres
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#platforms" class="md-nav__link">
-    <span class="md-ellipsis">
-      Platforms
+      Performance Indexes:
     </span>
   </a>
   
@@ -740,39 +803,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enums" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enums
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Enums">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#game-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      Game Status
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#indexes-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      Indexes &amp; Constraints
-    </span>
-  </a>
   
 </li>
       
@@ -794,104 +824,162 @@
 
 
 
-<h1 id="system-architecture">System Architecture<a class="headerlink" href="#system-architecture" title="Permanent link">&para;</a></h1>
+<h1 id="system-modules">System Modules<a class="headerlink" href="#system-modules" title="Permanent link">&para;</a></h1>
 <h2 id="module-breakdown">Module Breakdown<a class="headerlink" href="#module-breakdown" title="Permanent link">&para;</a></h2>
 <h3 id="users-module">Users Module<a class="headerlink" href="#users-module" title="Permanent link">&para;</a></h3>
+<p><strong>User</strong></p>
 <ul>
 <li>Custom user model based on <code>AbstractUser</code></li>
-<li>Role stored as enum (<code>ADMIN</code>, <code>GAMER</code>)</li>
-<li>Authentication and authorization logic</li>
-<li>Soft deletion for auditability</li>
+<li><strong>Fields</strong>:</li>
+<li><code>email</code> (Unique, Login Field)</li>
+<li><code>username</code> (Unique)</li>
+<li><code>role</code> (Enum: <code>SUPER_ADMIN</code>, <code>ADMIN</code>, <code>GAMER</code>, Default: <code>GAMER</code>)</li>
+<li><code>tenant</code> (FK → Tenant, Nullable)</li>
+<li><code>is_verified</code> (Boolean, Default: False)</li>
+<li><code>is_active</code> (Boolean, Default: True)</li>
+<li><strong>Key Logic</strong>:</li>
+<li>Soft deletion support (overrides <code>delete</code> to set <code>is_active=False</code> and <code>deleted_at</code>)</li>
+<li>Indexes on <code>(tenant, role)</code> and <code>(email, is_verified)</code></li>
 </ul>
-<h3 id="games-module">Games Module<a class="headerlink" href="#games-module" title="Permanent link">&para;</a></h3>
+<h3 id="tenants-module">Tenants Module<a class="headerlink" href="#tenants-module" title="Permanent link">&para;</a></h3>
+<p><strong>Tenant</strong></p>
 <ul>
-<li>Stores <strong>user-owned games</strong></li>
-<li>Each game belongs to exactly one user</li>
-<li>Tracks game progress and metadata</li>
+<li>Represents the organization/account context</li>
+<li><strong>Fields</strong>:</li>
+<li><code>name</code> (Char)</li>
+<li><code>status</code> (Enum: <code>ACTIVE</code>, <code>INACTIVE</code>, <code>PREMIUM</code>, Default: <code>ACTIVE</code>)</li>
+<li><strong>Key Logic</strong>:</li>
+<li>Central entity for multi-tenancy rules</li>
 </ul>
-<p>Tracked fields include:</p>
+<h3 id="tenant-games-module">Tenant Games Module<a class="headerlink" href="#tenant-games-module" title="Permanent link">&para;</a></h3>
+<p><strong>TenantGame</strong></p>
 <ul>
-<li>Game title</li>
-<li>Platform played (FK → platforms)</li>
-<li>Genre (FK → genres)</li>
-<li>Status (enum)</li>
-<li>Hours played</li>
-<li>Personal rating (integer between 0-5)</li>
-<li>Notes</li>
-<li>Completion timestamp</li>
+<li>Links a Tenant to a Catalog Game (Availability)</li>
+<li><strong>Fields</strong>:</li>
+<li><code>tenant</code> (FK → Tenant)</li>
+<li><code>game</code> (FK → Catalog Game)</li>
+<li><strong>Key Logic</strong>:</li>
+<li>Unique constraint on <code>(tenant, game)</code> (where active) implies a tenant cannot have duplicate entries for the same game.</li>
+<li>Soft deletion support.</li>
+</ul>
+<h3 id="games-module-catalog">Games Module (Catalog)<a class="headerlink" href="#games-module-catalog" title="Permanent link">&para;</a></h3>
+<p><strong>Game</strong></p>
+<ul>
+<li>Represents a global/catalog game entry</li>
+<li><strong>Fields</strong>:</li>
+<li><code>title</code> (Char)</li>
+<li><code>description</code> (Text, Optional)</li>
+<li><code>release_date</code> (Date, Optional)</li>
+<li><code>genre</code> (FK → Genre)</li>
+<li><code>platforms</code> (M2M → Platform)</li>
 </ul>
 <h3 id="genres-module">Genres Module<a class="headerlink" href="#genres-module" title="Permanent link">&para;</a></h3>
+<p><strong>Genre</strong></p>
 <ul>
-<li>Stores predefined game genres</li>
-<li>Managed only by admin users</li>
-<li>Used as reference data for user games</li>
-<li>Prevents magic strings and duplication</li>
+<li>Reference data for categorizing games</li>
+<li><strong>Fields</strong>:</li>
+<li><code>name</code> (Char)</li>
 </ul>
 <h3 id="platforms-module">Platforms Module<a class="headerlink" href="#platforms-module" title="Permanent link">&para;</a></h3>
+<p><strong>Platform</strong></p>
 <ul>
-<li>Stores predefined gaming platforms (PC, PlayStation, Xbox, etc.)</li>
-<li>Managed only by admin users</li>
-<li>Used as reference data for user games</li>
-<li>Prevents magic strings and inconsistent platform values</li>
+<li>Reference data for gaming platforms</li>
+<li><strong>Fields</strong>:</li>
+<li><code>name</code> (Char)</li>
+</ul>
+<h3 id="user-games-module">User Games Module<a class="headerlink" href="#user-games-module" title="Permanent link">&para;</a></h3>
+<p><strong>UserGame</strong></p>
+<ul>
+<li>Represents a specific user's instance/progress of a game</li>
+<li><strong>Fields</strong>:</li>
+<li><code>user</code> (FK → User)</li>
+<li><code>tenant_game</code> (FK → TenantGame)</li>
+<li><code>platform</code> (FK → Platform)</li>
+<li><code>status</code> (Enum: <code>WISHLIST</code>, <code>PLAYING</code>, <code>COMPLETED</code>, <code>DROPPED</code>, Default: <code>WISHLIST</code>)</li>
+<li><code>tenant</code> (FK → Tenant)</li>
+<li><code>hours_played</code> (PositiveInt, Optional)</li>
+<li><code>personal_rating</code> (PositiveSmallInt, Optional)</li>
+<li><code>started_on</code> (Date, Optional)</li>
+<li><code>completed_on</code> (Date, Optional)</li>
+<li><strong>Key Logic</strong>:</li>
+<li>Indexes on <code>(user, status)</code>, <code>created_at</code>, <code>(user, tenant)</code>.</li>
+</ul>
+<p><strong>UserGameNote</strong></p>
+<ul>
+<li>Notes attached to a user game</li>
+<li><strong>Fields</strong>:</li>
+<li><code>user_game</code> (FK → UserGame)</li>
+<li><code>note</code> (Text)</li>
+<li><code>tenant</code> (FK → Tenant)</li>
+</ul>
+<h3 id="payments-module">Payments Module<a class="headerlink" href="#payments-module" title="Permanent link">&para;</a></h3>
+<p><strong>Payment</strong></p>
+<ul>
+<li>Tracks individual payment transactions via Razorpay</li>
+<li><strong>Fields</strong>:</li>
+<li><code>tenant</code> (FK → Tenant)</li>
+<li><code>admin</code> (FK → User)</li>
+<li><code>razorpay_order_id</code> (Char, Unique)</li>
+<li><code>razorpay_payment_id</code> (Char, Nullable)</li>
+<li><code>razorpay_signature</code> (Char, Nullable)</li>
+<li><code>amount</code> (Int, in paise)</li>
+<li><code>status</code> (Enum: <code>CREATED</code>, <code>AUTHORIZED</code>, <code>PAID</code>, <code>VERIFIED</code>, <code>ACTIVATED</code>, <code>FAILED</code>, <code>REFUNDED</code>, <code>CANCELLED</code>)</li>
+<li><code>verified_at</code> (DateTime, Optional)</li>
+<li><code>activated_at</code> (DateTime, Optional)</li>
+<li><code>error_message</code> (Text, Optional)</li>
+<li><code>metadata</code> (JSON)</li>
+<li><strong>Key Logic</strong>:</li>
+<li>State transitions validation.</li>
+</ul>
+<p><strong>Subscription</strong></p>
+<ul>
+<li>Tracks tenant subscription status</li>
+<li><strong>Fields</strong>:</li>
+<li><code>tenant</code> (OneToOne → Tenant)</li>
+<li><code>payment</code> (FK → Payment, Nullable, tracks activation payment)</li>
+<li><code>status</code> (Enum: <code>NONE</code>, <code>PENDING</code>, <code>ACTIVE</code>, <code>EXPIRED</code>, Default: <code>NONE</code>)</li>
+<li><code>activated_at</code> (DateTime, Optional)</li>
+<li><code>deactivated_at</code> (DateTime, Optional)</li>
+<li><strong>Key Logic</strong>:</li>
+<li>Designed for lifetime activation (One subscription per tenant).</li>
+</ul>
+<p><strong>WebhookEvent</strong></p>
+<ul>
+<li>Logs raw webhook requests for audit</li>
+<li><strong>Fields</strong>:</li>
+<li><code>event_id</code> (Char, Unique)</li>
+<li><code>event_type</code> (Char)</li>
+<li><code>payload</code> (JSON)</li>
+<li><code>raw_body</code> (Text)</li>
+<li><code>status</code> (Enum: <code>PENDING</code>, <code>PROCESSING</code>, <code>PROCESSED</code>, <code>FAILED</code>, Default: <code>PENDING</code>)</li>
+<li><code>error_message</code> (Text, Optional)</li>
+<li><code>retry_count</code> (Int)</li>
+<li><code>processed_at</code> (DateTime, Optional)</li>
 </ul>
 <h2 id="database-design">Database Design<a class="headerlink" href="#database-design" title="Permanent link">&para;</a></h2>
-<p><img alt="ERD" src="../assets/schema.svg" /></p>
-<p>The database uses a <strong>normalized relational design</strong> with a clear separation between:</p>
-<ul>
-<li>User data</li>
-<li>User-owned gaming content</li>
-<li>Reference data (genres, platforms)</li>
-</ul>
+<p><a href="https://mermaid.live/edit#pako:eNrVWP9P2zgU_1cs_zSklCuFAo10P2zQu1UrpbeVnTZFikzy2npL7MhxgFL43_fstGnaJpTttqGToIn9Pn5-35-dOQ1kCNSljUbDE4EUYz5xPUGInkIMLglhzLJIm5mIzWSmXQLRV09YOKhzziaKxZ7wdMgVBJpLQUZvzFiDYEKnZG4Gns4yHhL8Ix4dvvMoPu30DVPBlKlXrXZ7jwgWgwFcDXr_XHVXIBBZTFLNdJYacm_w-mzU-9j9Y_EYvu9e9K4uVviQadAceQUK8DX0mTbrKgBZEj4NCCGCbcAj_hQq-hMUu0rPFTs7uUDntL_ebVANkwra71IlS0Ht8lWVFmRw1e8TKaIZGUtF0iwBxcKYiw3vKRlZ15rBK6OrcojFOaU1e9txcdBu7hEjXF1srAUQxIxHO1EJS9NbqawGU5ZOIawBjrlKtb_cuQYUsUrMtZQR4al_A4qPOYQ1TvnFbq0LzdoU1FxHUBG8ExCqKj413GkUIQ0UT2zybwlJFArIUvDt4GWsYIT_KZXod0mcRExjPsX_K6FtsPnVoteUN0tbrtiil2qT_5xIttMWXbNTqWDvgNSLOkP1ayXe6lW23v3b-_C23_swcsiw__pTb_C3Q84uL4b97qh77pDz95fDYfe8VPy40GQqM2WNOdusHYaKFTOVgkW-YjieGECz0d5IPJRCGWdVZmUg4yT3ZU6-HPQ_ET5eiv7nSsKXaUa5k4TU3-H1H_KrrWBmn5epTQmbxbD7nPSM2LQttIJYtNImtlLF7qXCPX3sf0We1HXL9RULSf3Nw01Rg9bQKZ8IjCQF28HLYpkJawsusBnzFGrTZ2F8PCtkeioVvzfvuAR_l40VaXjsvMlhY-z_5qlgnInQvAVMBBBF5R5fOGbJot51BestiA0bUEoqHwtTyiYbin7B_CQxaIa82M8NrUXkpNl10XZ_6Oh2KWAk8Wezxq35-YnaJqQA9AaIEEvQwg04AXcJXgXC77JmKVeeAfpvdruF66mUX324KeedCcz6_mozwS7YkTLtAqdnSVVIoHUjycKKYFLs1r-W4WydtGHzwtqJkgHGXfl9lQDPD1OjtgKtZn6wTMoKexYb_CqfLC6LDw-Nhpzbu4hrEbSSmB8GSgi74gl6fgDMAVs0My6RVgeYEqiY2wUsXwmfEGiDX61SlYzyrlhnoLIE1WrWINa4LNtStZErqKXVDw9rpams9mJdzqUKRR06UTykrlYZOBTviXilwyGde_aYYj9LeNTF1-WnCeT8iMsSJj5LGS9XKplNptQdsyjFUR58i68VBQRzCdSZiXvqdiwH6s7pHXWPjg_2D486naNO8-S0ddw5OXTojLrtw_3OQfO002odH-J_q9N-dOi93bS5f3rSdiiEXEt1kX9SsV9WHr8BLEP25A"><img alt="" src="https://mermaid.ink/img/pako:eNrVWP9P2zgU_1cs_zSklCuFAo10P2zQu1UrpbeVnTZFikzy2npL7MhxgFL43_fstGnaJpTttqGToIn9Pn5-35-dOQ1kCNSljUbDE4EUYz5xPUGInkIMLglhzLJIm5mIzWSmXQLRV09YOKhzziaKxZ7wdMgVBJpLQUZvzFiDYEKnZG4Gns4yHhL8Ix4dvvMoPu30DVPBlKlXrXZ7jwgWgwFcDXr_XHVXIBBZTFLNdJYacm_w-mzU-9j9Y_EYvu9e9K4uVviQadAceQUK8DX0mTbrKgBZEj4NCCGCbcAj_hQq-hMUu0rPFTs7uUDntL_ebVANkwra71IlS0Ht8lWVFmRw1e8TKaIZGUtF0iwBxcKYiw3vKRlZ15rBK6OrcojFOaU1e9txcdBu7hEjXF1srAUQxIxHO1EJS9NbqawGU5ZOIawBjrlKtb_cuQYUsUrMtZQR4al_A4qPOYQ1TvnFbq0LzdoU1FxHUBG8ExCqKj413GkUIQ0UT2zybwlJFArIUvDt4GWsYIT_KZXod0mcRExjPsX_K6FtsPnVoteUN0tbrtiil2qT_5xIttMWXbNTqWDvgNSLOkP1ayXe6lW23v3b-_C23_swcsiw__pTb_C3Q84uL4b97qh77pDz95fDYfe8VPy40GQqM2WNOdusHYaKFTOVgkW-YjieGECz0d5IPJRCGWdVZmUg4yT3ZU6-HPQ_ET5eiv7nSsKXaUa5k4TU3-H1H_KrrWBmn5epTQmbxbD7nPSM2LQttIJYtNImtlLF7qXCPX3sf0We1HXL9RULSf3Nw01Rg9bQKZ8IjCQF28HLYpkJawsusBnzFGrTZ2F8PCtkeioVvzfvuAR_l40VaXjsvMlhY-z_5qlgnInQvAVMBBBF5R5fOGbJot51BestiA0bUEoqHwtTyiYbin7B_CQxaIa82M8NrUXkpNl10XZ_6Oh2KWAk8Wezxq35-YnaJqQA9AaIEEvQwg04AXcJXgXC77JmKVeeAfpvdruF66mUX324KeedCcz6_mozwS7YkTLtAqdnSVVIoHUjycKKYFLs1r-W4WydtGHzwtqJkgHGXfl9lQDPD1OjtgKtZn6wTMoKexYb_CqfLC6LDw-Nhpzbu4hrEbSSmB8GSgi74gl6fgDMAVs0My6RVgeYEqiY2wUsXwmfEGiDX61SlYzyrlhnoLIE1WrWINa4LNtStZErqKXVDw9rpams9mJdzqUKRR06UTykrlYZOBTviXilwyGde_aYYj9LeNTF1-WnCeT8iMsSJj5LGS9XKplNptQdsyjFUR58i68VBQRzCdSZiXvqdiwH6s7pHXWPjg_2D486naNO8-S0ddw5OXTojLrtw_3OQfO002odH-J_q9N-dOi93bS5f3rSdiiEXEt1kX9SsV9WHr8BLEP25A?type=png" /></a></p>
 <h3 id="key-design-principles">Key Design Principles<a class="headerlink" href="#key-design-principles" title="Permanent link">&para;</a></h3>
 <ul>
-<li>All games are owned by users</li>
-<li>No shared or global game catalog</li>
-<li>Enums are used for constrained values</li>
-<li>Soft deletion is used where appropriate</li>
+<li><strong>Normalization</strong>: Catalog data (Game, Genre, Platform) is separated from Tenant and User data.</li>
+<li><strong>Multi-tenancy</strong>: Almost all interaction models (<code>User</code>, <code>UserGame</code>, <code>Payment</code>, <code>TenantGame</code>) link explicitly to <code>Tenant</code>.</li>
+<li><strong>Soft Deletion</strong>: Core models inherit from <code>BaseModel</code> which likely provides <code>deleted_at</code>.</li>
+<li><strong>Enums</strong>: Used strictly for Statuses and Roles to enforce business logic.</li>
 </ul>
-<h2 id="entities">Entities<a class="headerlink" href="#entities" title="Permanent link">&para;</a></h2>
-<h3 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h3>
+<h2 id="indexes-constraints-overview">Indexes &amp; Constraints Overview<a class="headerlink" href="#indexes-constraints-overview" title="Permanent link">&para;</a></h2>
+<h3 id="uniqueness"><strong>Uniqueness</strong>:<a class="headerlink" href="#uniqueness" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Stores application users (admins and gamers)</li>
-<li>Role stored as enum (<code>ADMIN</code>, <code>GAMER</code>)</li>
-<li>Supports soft deletion</li>
+<li><code>users.email</code></li>
+<li><code>users.username</code></li>
+<li><code>tenant_games(tenant, game)</code> (Active records)</li>
+<li><code>payments.razorpay_order_id</code></li>
+<li><code>webhook_events.event_id</code></li>
 </ul>
-<h3 id="games">Games<a class="headerlink" href="#games" title="Permanent link">&para;</a></h3>
+<h3 id="performance-indexes"><strong>Performance Indexes</strong>:<a class="headerlink" href="#performance-indexes" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Represents a user’s personal game entry</li>
-<li>Linked to exactly one user</li>
-<li>Contains progress-specific data</li>
-</ul>
-<h3 id="genres">Genres<a class="headerlink" href="#genres" title="Permanent link">&para;</a></h3>
-<ul>
-<li>System-managed reference data</li>
-<li>Selected by users when creating games</li>
-<li>Not user-editable</li>
-</ul>
-<h3 id="platforms">Platforms<a class="headerlink" href="#platforms" title="Permanent link">&para;</a></h3>
-<ul>
-<li>System-managed reference data</li>
-<li>Selected by users when creating games</li>
-<li>Not user-editable</li>
-</ul>
-<h2 id="enums">Enums<a class="headerlink" href="#enums" title="Permanent link">&para;</a></h2>
-<h3 id="game-status">Game Status<a class="headerlink" href="#game-status" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>WISHLIST</code></li>
-<li><code>PLAYING</code></li>
-<li><code>COMPLETED</code></li>
-<li><code>DROPPED</code></li>
-</ul>
-<h2 id="indexes-constraints">Indexes &amp; Constraints<a class="headerlink" href="#indexes-constraints" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>users.email</code> – UNIQUE</li>
-<li><code>users.username</code> – UNIQUE</li>
-<li><code>genres.name</code> – UNIQUE</li>
-<li><code>platforms.name</code> – UNIQUE</li>
-<li><code>games(user_id, status)</code> - Optimizes user-scoped game queries with status filtering</li>
-<li><code>games.created_at</code> - Supports default ordering and paginated listing</li>
-<li>Foreign key constraints enforced across all relations</li>
-<li>Enum validation enforced via model field choices and serializer validation</li>
+<li><code>users(tenant, role)</code></li>
+<li><code>user_games(user, status)</code></li>
+<li><code>payments(tenant, status)</code></li>
+<li><code>webhook_events(status, created_at)</code></li>
 </ul>
 
 

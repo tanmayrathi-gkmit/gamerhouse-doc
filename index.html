@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="architecture/">
+        <link rel="next" href="modules/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -18,14 +18,11 @@
     
     
       
-        <title>GamerHouse Technical Documentation</title>
+        <title>GamerHouse System Documentation</title>
       
     
     
       <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
-      
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -54,14 +51,7 @@
   </head>
   
   
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -70,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gamerhouse-technical-document" class="md-skip">
+        <a href="#gamerhouse-technical-documentation" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +74,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="GamerHouse Technical Documentation" class="md-header__button md-logo" aria-label="GamerHouse Technical Documentation" data-md-component="logo">
+    <a href="." title="GamerHouse System Documentation" class="md-header__button md-logo" aria-label="GamerHouse System Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,30 +88,18 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            GamerHouse Technical Documentation
+            GamerHouse System Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Overview
             
           </span>
         </div>
       </div>
     </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
-    
-  
-</form>
-      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -199,7 +177,7 @@
   
     
   
-  Home
+  Overview
 
       </a>
     </li>
@@ -212,13 +190,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="architecture/" class="md-tabs__link">
+      <a href="modules/" class="md-tabs__link">
         
   
   
     
   
-  Architecture
+  Modules
 
       </a>
     </li>
@@ -231,13 +209,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="roles-permissions/" class="md-tabs__link">
+      <a href="permissions/" class="md-tabs__link">
         
   
   
     
   
-  User Guide
+  Permissions
 
       </a>
     </li>
@@ -250,13 +228,51 @@
   
   
     <li class="md-tabs__item">
-      <a href="api-reference/" class="md-tabs__link">
+      <a href="auth_flow/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Auth Flow
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="api/" class="md-tabs__link">
         
   
   
     
   
   API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="api_documentation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Documentation
 
       </a>
     </li>
@@ -287,13 +303,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="GamerHouse Technical Documentation" class="md-nav__button md-logo" aria-label="GamerHouse Technical Documentation" data-md-component="logo">
+    <a href="." title="GamerHouse System Documentation" class="md-nav__button md-logo" aria-label="GamerHouse System Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    GamerHouse Technical Documentation
+    GamerHouse System Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -319,7 +335,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Overview
     
   </span>
   
@@ -332,7 +348,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Overview
     
   </span>
   
@@ -364,45 +380,111 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problem-statement" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem Statement
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Architecture
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-authorization" class="md-nav__link">
     <span class="md-ellipsis">
-      Objectives
+      Authentication &amp; Authorization
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#scope-of-the-project" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#game-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Scope of the Project
+      Game Management
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#technology-stack" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#payments-subscriptions" class="md-nav__link">
     <span class="md-ellipsis">
-      Technology Stack
+      Payments &amp; Subscriptions
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging &amp; Observability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#architecture-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      Architecture Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-tenancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Tenancy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tech-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tech Stack
     </span>
   </a>
   
@@ -423,12 +505,12 @@
   
   
     <li class="md-nav__item">
-      <a href="architecture/" class="md-nav__link">
+      <a href="modules/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Architecture
+    Modules
     
   </span>
   
@@ -445,12 +527,12 @@
   
   
     <li class="md-nav__item">
-      <a href="roles-permissions/" class="md-nav__link">
+      <a href="permissions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    User Guide
+    Permissions
     
   </span>
   
@@ -467,12 +549,56 @@
   
   
     <li class="md-nav__item">
-      <a href="api-reference/" class="md-nav__link">
+      <a href="auth_flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auth Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api_documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Documentation
     
   </span>
   
@@ -520,45 +646,111 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problem-statement" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem Statement
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Architecture
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-authorization" class="md-nav__link">
     <span class="md-ellipsis">
-      Objectives
+      Authentication &amp; Authorization
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#scope-of-the-project" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#game-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Scope of the Project
+      Game Management
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#technology-stack" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#payments-subscriptions" class="md-nav__link">
     <span class="md-ellipsis">
-      Technology Stack
+      Payments &amp; Subscriptions
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging &amp; Observability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#architecture-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      Architecture Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-tenancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Tenancy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tech-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tech Stack
     </span>
   </a>
   
@@ -582,44 +774,103 @@
 
 
 
-<h1 id="gamerhouse-technical-document">GamerHouse – Technical Document<a class="headerlink" href="#gamerhouse-technical-document" title="Permanent link">&para;</a></h1>
+<h1 id="gamerhouse-technical-documentation">GamerHouse Technical Documentation<a class="headerlink" href="#gamerhouse-technical-documentation" title="Permanent link">&para;</a></h1>
 <h2 id="project-overview">Project Overview<a class="headerlink" href="#project-overview" title="Permanent link">&para;</a></h2>
-<p>GamerHouse is a REST-based backend system that allows users to <strong>maintain a private, personalized gaming library</strong>. Authenticated users can track games they are playing, wish to play, or have completed, along with progress details such as hours played, personal ratings, and notes.</p>
-<p>The system is designed to be <strong>simple, secure, and user-centric</strong>, following Django and Django REST Framework best practices. All gaming data is owned by individual users and is not shared publicly.</p>
-<h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
-<p>Gamers often play multiple games across platforms and struggle to keep track of their progress and preferences. Existing solutions are either public or unnecessarily complex.</p>
-<p>There is a need for a <strong>simple, authenticated REST API</strong> that enables users to:</p>
+<p>GamerHouse is a <strong>multi-tenant Django REST Framework (DRF)</strong> backend for managing game libraries across multiple organizations. It provides a secure, scalable platform with role-based access control, email verification, and background task processing.</p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<h3 id="core-architecture">Core Architecture<a class="headerlink" href="#core-architecture" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Maintain a personal list of games</li>
-<li>Track game status and progress</li>
-<li>Store gaming metadata securely</li>
-<li>Perform CRUD operations on their own gaming data</li>
+<li><strong>Multi-tenancy</strong> – Complete data isolation between organizations</li>
+<li><strong>UUID primary keys</strong> – All models use UUIDs for security and scalability</li>
+<li><strong>Soft delete</strong> support with active/all object managers</li>
+<li><strong>Background tasks</strong> – Celery with Redis for async processing</li>
+<li><strong>Caching</strong> – Redis-backed Django cache with decorator-based response caching</li>
+<li><strong>Response filtering</strong> – Search and filter support for catalog endpoints</li>
+<li><strong>Rate limiting</strong> – Authentication endpoints protected with rate limiting (5/minute)</li>
 </ul>
-<h2 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<h3 id="authentication-authorization">Authentication &amp; Authorization<a class="headerlink" href="#authentication-authorization" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Implement a complete user authentication flow</li>
-<li>Enable CRUD operations for user-owned gaming content</li>
-<li>Use Enums, Constants, and Environment Variables</li>
-<li>Enforce strict user-level data isolation</li>
-<li>Follow clean Django project and app structuring</li>
+<li><strong>Email-based authentication</strong> – Login with email instead of username</li>
+<li><strong>Email verification</strong> – Required for new user registrations</li>
+<li><strong>OTP login flow</strong> – Two-step authentication with OTP verification</li>
+<li><strong>Password reset</strong> – Forgot password and reset password endpoints</li>
+<li><strong>JWT tokens</strong> – Using SimpleJWT with token blacklisting</li>
+<li><strong>Role-based access control</strong> – Super Admin, Admin, and Gamer roles</li>
 </ul>
-<h2 id="scope-of-the-project">Scope of the Project<a class="headerlink" href="#scope-of-the-project" title="Permanent link">&para;</a></h2>
+<h3 id="game-management">Game Management<a class="headerlink" href="#game-management" title="Permanent link">&para;</a></h3>
 <ul>
-<li>User registration and authentication (JWT)</li>
-<li>Role-based access control (Admin, Gamer)</li>
-<li>User-owned game management</li>
-<li>Game progress and status tracking</li>
-<li>Admin-managed reference data (genres, platforms)</li>
+<li><strong>Tenant-scoped games</strong> – Games are managed per tenant</li>
+<li><strong>Personal game library</strong> – Track your gaming progress</li>
+<li><strong>Status tracking</strong> – Wishlist, Playing, Completed, Dropped</li>
+<li><strong>Advanced filtering</strong> – Filter by status, platform, rating, hours played, genre</li>
+<li><strong>Game notes</strong> – Add personal notes to your games</li>
+<li><strong>Free tier limits</strong> – Max 5 games for free users</li>
 </ul>
-<h2 id="technology-stack">Technology Stack<a class="headerlink" href="#technology-stack" title="Permanent link">&para;</a></h2>
+<h3 id="payments-subscriptions">Payments &amp; Subscriptions<a class="headerlink" href="#payments-subscriptions" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Backend Framework:</strong> Django, Django REST Framework</li>
-<li><strong>Authentication:</strong> JWT (Access &amp; Refresh tokens)</li>
-<li><strong>Database:</strong> PostgreSQL </li>
-<li><strong>ORM:</strong> Django ORM</li>
+<li><strong>Razorpay integration</strong> – Secure payment gateway integration</li>
+<li><strong>Premium subscriptions</strong> – Unlock unlimited game library entries</li>
+<li><strong>Subscription management</strong> – Track subscription status and billing</li>
+<li><strong>Payment verification</strong> – Secure signature verification for payments</li>
+<li><strong>Webhook handling</strong> – Automatic payment status updates via webhooks</li>
+<li><strong>Payment polling</strong> – Automatic reconciliation of pending payments</li>
 </ul>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>GamerHouse is designed as a <strong>secure, simple, and user-focused backend system</strong> that directly aligns with the project PRD. The architecture prioritizes correctness, clarity, and maintainability while demonstrating strong fundamentals in Django, Django REST Framework, authentication, authorization, and RESTful API design.</p>
+<h3 id="logging-observability">Logging &amp; Observability<a class="headerlink" href="#logging-observability" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Structured JSON logging</strong> – JSON-formatted logs for easier parsing and analysis</li>
+<li><strong>Configurable logging</strong> – File, console, and log level configuration</li>
+<li><strong>Request/Response logging</strong> – Track all API requests and responses</li>
+<li><strong>Correlation IDs</strong> – Trace requests across distributed systems using context variables</li>
+<li><strong>Task logging</strong> – Background task execution tracking</li>
+</ul>
+<h3 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Standardized error responses</strong> – Consistent error format across all endpoints</li>
+<li><strong>Detailed error messages</strong> – Clear, actionable error descriptions</li>
+<li><strong>Proper HTTP status codes</strong> – Correct status codes for different error types</li>
+<li><strong>Middleware-based error handling</strong> – JSON error formatting and logging</li>
+</ul>
+<h2 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h2>
+<h3 id="multi-tenancy">Multi-Tenancy<a class="headerlink" href="#multi-tenancy" title="Permanent link">&para;</a></h3>
+<p>GamerHouse uses a <strong>shared database, shared schema</strong> multi-tenancy model where:</p>
+<ul>
+<li>All data is scoped to a tenant via foreign keys</li>
+<li>Users belong to a single tenant</li>
+<li>Admins can only manage users and games within their tenant</li>
+<li>Super admins can manage platform-wide resources</li>
+<li><strong>Automatic tenant context isolation</strong> – Tenant is automatically set during authentication and used for query filtering</li>
+<li><strong>Context variables</strong> – Tenant context is safely stored per request using Python's <code>contextvars</code> for async compatibility</li>
+</ul>
+<h3 id="role-hierarchy">Role Hierarchy<a class="headerlink" href="#role-hierarchy" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Super Admin</strong> – Platform-level administration, manages catalog (games, genres, platforms), payments, and subscriptions</li>
+<li><strong>Admin</strong> – Tenant-level administration, manages users and games within their tenant, handles premium subscriptions</li>
+<li><strong>Gamer</strong> – Regular user, manages their own game library (limited to 5 games on free tier)</li>
+</ol>
+<h2 id="tech-stack">Tech Stack<a class="headerlink" href="#tech-stack" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Python 3.13+</strong></li>
+<li><strong>Django 6.0</strong></li>
+<li><strong>Django REST Framework 3.16+</strong></li>
+<li><strong>PostgreSQL</strong> – Primary database</li>
+<li><strong>Redis</strong> – Caching and message broker</li>
+<li><strong>Celery</strong> – Background task processing</li>
+<li><strong>SimpleJWT</strong> – JWT authentication</li>
+<li><strong>django-filter</strong> – Advanced filtering</li>
+<li><strong>django-celery-beat</strong> – Periodic task scheduling</li>
+<li><strong>Razorpay SDK</strong> – Payment gateway integration</li>
+</ul>
+<p><strong>Key Architectural Decisions</strong>:</p>
+<ul>
+<li>Multi-tenant shared database model with FK-based isolation</li>
+<li>UUID primary keys across all models</li>
+<li>Soft delete pattern with dual managers (<code>objects</code>, <code>all_objects</code>)</li>
+<li>OTP-based login with email verification</li>
+<li>JWT authentication with Redis-backed blacklisting</li>
+<li>Celery for async tasks</li>
+<li>DRF with custom renderers, pagination, and exception handling</li>
+<li>Role-based access control (Super Admin, Admin, Gamer)</li>
+</ul>
 
 
 
