@@ -962,7 +962,7 @@
 <ul>
 <li><strong>Normalization</strong>: Catalog data (Game, Genre, Platform) is separated from Tenant and User data.</li>
 <li><strong>Multi-tenancy</strong>: Almost all interaction models (<code>User</code>, <code>UserGame</code>, <code>Payment</code>, <code>TenantGame</code>) link explicitly to <code>Tenant</code>.</li>
-<li><strong>Soft Deletion</strong>: Core models inherit from <code>BaseModel</code> which likely provides <code>deleted_at</code>.</li>
+<li><strong>Soft Deletion</strong>: Core models inherit from <code>BaseModel</code> which provides <code>id</code>, <code>created_at</code>, <code>updated_at</code> and <code>deleted_at</code>.</li>
 <li><strong>Enums</strong>: Used strictly for Statuses and Roles to enforce business logic.</li>
 </ul>
 <h2 id="indexes-constraints-overview">Indexes &amp; Constraints Overview<a class="headerlink" href="#indexes-constraints-overview" title="Permanent link">&para;</a></h2>
