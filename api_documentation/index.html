@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../api/">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +18,7 @@
     
     
       
-        <title>GamerHouse API Documentation - GamerHouse System Documentation</title>
+        <title>API Documentation - GamerHouse System Documentation</title>
       
     
     
@@ -92,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GamerHouse API Documentation
+              API Documentation
             
           </span>
         </div>
@@ -256,6 +258,27 @@
   
 
       
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Documentation
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -397,6 +420,955 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API Documentation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Documentation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Roles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-authentication-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Authentication Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Authentication Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-register-gamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Register Gamer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-refresh-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Refresh Token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-logout" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Logout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-verify-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Verify Email
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-forgot-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Forgot Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-reset-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 Reset Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-verify-login-otp" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8 Verify Login (OTP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-resend-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9 Resend Verification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-user-management-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. User Management (Admin)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. User Management (Admin)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-list-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 List Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-get-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Get User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-create-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Create User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-delete-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Delete User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-disable-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Disable User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-restore-deleted-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 Restore Deleted User
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-user-management-self" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. User Management (Self)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. User Management (Self)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-get-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Get Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-update-self-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Update Self Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-change-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Change Password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-delete-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Delete Account
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tenant-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tenant Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Tenant Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-list-tenants" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 List Tenants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-get-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Get Tenant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-create-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Create Tenant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-update-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Update Tenant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-delete-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Delete Tenant
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-genre-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Genre Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Genre Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-list-genres" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 List Genres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-get-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Get Genre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-add-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Add Genre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-update-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Update Genre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-delete-genre" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Delete Genre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-game-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Game Catalog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Game Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-list-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 List Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-get-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Get Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-add-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Add Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-update-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Update Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-delete-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Delete Game
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-platform-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Platform Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Platform Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-list-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 List Platforms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-get-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Get Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-add-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Add Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-update-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 Update Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-delete-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 Delete Platform
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Tenant Games
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Tenant Games">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-list-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 List Tenant Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-add-tenant-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 Add Tenant Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-bulk-add-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 Bulk Add Tenant Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-bulk-delete-tenant-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4 Bulk Delete Tenant Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-delete-tenant-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.5 Delete Tenant Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86-get-tenant-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.6 Get Tenant Game
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-user-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. User Games
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. User Games">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-list-user-games" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 List User Games
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-get-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 Get User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-create-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 Create User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-update-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 Update User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-delete-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5 Delete User Game
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-user-game-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. User Game Notes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. User Game Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-list-notes-for-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 List Notes for User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-get-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 Get Note
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-add-note-to-user-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3 Add Note to User Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104-update-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4 Update Note
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#105-delete-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.5 Delete Note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-payments" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Payments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Payments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-create-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 Create Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-verify-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 Verify Payment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-razorpay-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.3 Razorpay Webhook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-list-subscriptions-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.4 List Subscriptions (Admin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-list-payments-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.5 List Payments (Admin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-list-webhook-events-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.6 List Webhook Events (Admin)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-error-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Error Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Error Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#400-bad-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      400 Bad Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#401-unauthorized" class="md-nav__link">
+    <span class="md-ellipsis">
+      401 Unauthorized
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#403-forbidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      403 Forbidden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#404-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      404 Not Found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#500-internal-server-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      500 Internal Server Error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Definitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tenant-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tenant Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genre-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genre Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#game-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Game Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-game-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Game Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagination-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagination Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
